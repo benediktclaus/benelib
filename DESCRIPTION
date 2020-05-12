@@ -1,6 +1,6 @@
 Package: benelib
 Type: Package
-Title: A Collection of Various Helper Functions for My Workflow
+Title: A Collection of Various Helper Functions for My R Workflow
 Version: 0.0.0.9000
 Authors@R: person("Benedikt", "Claus", email = "benediktclaus@msn.com", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9501-0954"))
 Description: Various helper functions for commonly executed tasks and color schemes for my scientific workflow.
@@ -14,6 +14,7 @@ Imports:
     ggplot2,
     purrr,
     grDevices,
-    tidyr
+    tidyr,
+    tibble
 Suggests: 
     dplyr
