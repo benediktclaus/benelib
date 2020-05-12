@@ -8,11 +8,11 @@ BugReports: https://github.com/benediktclaus/benelib/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
-  dplyr,
-  ggplot2,
-  grDevices,
-  magrittr,
-  purrr,
-  tidyr
 RoxygenNote: 7.1.0
+Imports: 
+    ggplot2,
+    purrr,
+    grDevices,
+    tidyr
+Suggests: 
+    dplyr

@@ -18,11 +18,20 @@ using a continuous scale.}
 \item{reverse}{Logical, defaults to \code{FALSE}. Setting this to \code{TRUE}
 changes the order of the colors.}
 
-\item{...}{Additional arguments passed to \code{\link{scale_color_gradientn}}.}
+\item{...}{Additional arguments passed to \code{\link[ggplot2]{scale_color_gradientn}}.}
 }
 \value{
 The PedScience color scale for ggplot2.
 }
 \description{
 Color scale using the PedScience color scheme in ggplot2.
+}
+\examples{
+library(ggplot2)
+
+p <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point()
+p + scale_color_pedscience()
+}
+\seealso{
+\code{\link{scale_fill_pedscience}}
 }
