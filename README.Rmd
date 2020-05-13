@@ -3,7 +3,7 @@ output: github_document
 ---
 
 ```{r echo=FALSE, message=FALSE}
-knitr::opts_chunk$set(dpi = 200)
+knitr::opts_chunk$set(dpi = 220)
 
 library(tidyverse)
 library(benelib)
