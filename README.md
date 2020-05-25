@@ -4,7 +4,7 @@
 The `benelib` contains some little helper functions for my commonly
 executed tasks, and thus a convenient workflow in R.
 
-It can be downloaded, installed and finally loaded via
+It can be downloaded, installed, and finally loaded via
 
 ``` r
 remotes::install_github("benediktclaus/benelib")
