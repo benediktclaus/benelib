@@ -1,8 +1,8 @@
 
 # benelib
 
-The `benelib` contains some helper functions for commonly executed
-tasks, and thus a convenient workflow in R.
+The `benelib` contains some little helper functions for my commonly
+executed tasks, and thus a convenient workflow in R.
 
 It can be downloaded, installed and finally loaded via
 
@@ -19,8 +19,9 @@ the Kinderpalliativzentrum, and Deutsches Kinderschmerzzentrum in
 Datteln for `ggplot2`.
 
 Those can be used via `scale_color_*` oder `scale_fill_*` and the
-respective name of the color scheme’s institution. Those can be mapped
-to continuous variables as well.
+respective name of the color scheme’s institution (i.e. “pedscience”,
+“palli”, or “dksz”). By giving the argument `discrete = FALSE`, those
+can be mapped to continuous variables as well.
 
 ``` r
 ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
@@ -31,6 +32,16 @@ ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 All of those contain six different palettes to fulfill everyone’s needs.
+These palettes are
+
+  - “main”,
+  - “plaful”,
+  - “heat” (for heatmaps),
+  - “full” (which includes all colors),
+  - “decent”, and
+  - “bright”.
+
+<!-- end list -->
 
 ``` r
 ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) +

@@ -1,7 +1,7 @@
 # Vector with defined colors for Palliativzentrum
 palli_colors <- c(
   "green"   = "#94c11f",
-  "red"     = "#e30613",
+  "orange"     = "#ed8a0d",
   "yellow"  = "#fbb900",
   "blue"    = "#009fe3",
   "grey"    = "#bebebe"
@@ -26,12 +26,12 @@ palli_cols <- function(...) {
 
 # Palettes, based on defined colors
 palli_palettes <- list(
-  "main"     = palli_cols("green", "red", "yellow"),
+  "main"     = palli_cols("green", "orange", "yellow"),
   "playful"  = palli_cols("green", "yellow", "blue"),
-  "heat"     = palli_cols("green", "red"),
-  "full"     = palli_cols("green", "red", "yellow", "blue", "grey"),
+  "heat"     = palli_cols("green", "orange"),
+  "full"     = palli_cols("green", "orange", "yellow", "blue", "grey"),
   "decent"   = palli_cols("green", "blue", "grey"),
-  "bright"   = palli_cols("green", "yellow", "red", "blue")
+  "bright"   = palli_cols("green", "yellow", "orange", "blue")
 )
 
 

@@ -2,9 +2,9 @@
 dksz_colors <- c(
   "red"        = "#e52221",
   "green"      = "#00803d",
-  "black"      = "#000000",
-  "yellow"     = "#fbc100",
-  "grey"       = "#bebebe"
+  "black"      = "#363c44",
+  "yellow"     = "#ff9900",
+  "grey"       = "#999594"
 )
 
 
