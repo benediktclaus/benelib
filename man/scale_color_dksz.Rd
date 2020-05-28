@@ -4,7 +4,13 @@
 \alias{scale_color_dksz}
 \title{Color scale using the DKSZ color scheme}
 \usage{
-scale_color_dksz(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_color_dksz(
+  palette = "main",
+  discrete = TRUE,
+  reverse = FALSE,
+  na.value = "grey70",
+  ...
+)
 }
 \arguments{
 \item{palette}{String, the color palette to use (defaults to \code{"main"}).
@@ -17,6 +23,8 @@ using a continuous scale.}
 
 \item{reverse}{Logical, defaults to \code{FALSE}. Setting this to \code{TRUE}
 changes the order of the colors.}
+
+\item{na.value}{String, the color for NA values.}
 
 \item{...}{Additional arguments passed to \code{\link[ggplot2]{scale_color_gradientn}}.}
 }

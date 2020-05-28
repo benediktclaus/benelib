@@ -4,7 +4,13 @@
 \alias{scale_fill_palli}
 \title{Fill scale using the Palliativ color scheme}
 \usage{
-scale_fill_palli(palette = "main", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_palli(
+  palette = "main",
+  discrete = TRUE,
+  reverse = FALSE,
+  na.value = "grey80",
+  ...
+)
 }
 \arguments{
 \item{palette}{String, the color palette to use (defaults to \code{"main"}).
@@ -17,6 +23,8 @@ using a continuous scale.}
 
 \item{reverse}{Logical, defaults to \code{FALSE}. Setting this to \code{TRUE}
 changes the order of the colors.}
+
+\item{na.value}{String, the color for NA values.}
 
 \item{...}{Additional arguments passed to \code{\link[ggplot2]{scale_color_gradientn}}.}
 }

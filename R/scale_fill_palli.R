@@ -14,8 +14,9 @@
 #'
 #' p <- ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) + geom_boxplot()
 #' p + scale_fill_palli()
-scale_fill_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+scale_fill_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- palli_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
 
   if (discrete) {
     ggplot2::discrete_scale("fill", scale_name = paste0("palli_", palette), palette = pal, na.value = "grey80", ...)

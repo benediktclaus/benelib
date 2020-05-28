@@ -14,12 +14,13 @@
 #'
 #' p <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point()
 #' p + scale_color_dksz()
-scale_color_dksz <- function(palette = "main", discrete = TRUE, reverse = FALSE, ...) {
+scale_color_dksz <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey70", ...) {
   pal <- dksz_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
 
   if (discrete) {
-    ggplot2::discrete_scale("colour", paste0("dksz_", palette), palette = pal, na.value = "grey70", ...)
+    ggplot2::discrete_scale("colour", paste0("dksz_", palette), palette = pal, na.value = na_value, ...)
   } else {
-    ggplot2::scale_color_gradientn(colours = pal(256), na.value = "grey70", ...)
+    ggplot2::scale_color_gradientn(colours = pal(256), na.value = na_value, ...)
   }
 }
