@@ -18,8 +18,8 @@ scale_fill_personal <- function(palette = "main", discrete = TRUE, reverse = FAL
   pal <- personal_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    ggplot2::discrete_scale("fill", scale_name = paste0("personal_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("fill", scale_name = paste0("personal_", palette), palette = pal, na.value = "grey80", ...)
   } else {
-    ggplot2::scale_fill_gradientn(colours = pal(256), ...)
+    ggplot2::scale_fill_gradientn(colours = pal(256), na.value = "grey80", ...)
   }
 }
