@@ -18,8 +18,8 @@ scale_color_dksz <- function(palette = "main", discrete = TRUE, reverse = FALSE,
   pal <- dksz_pal(palette = palette, reverse = reverse)
 
   if (discrete) {
-    ggplot2::discrete_scale("colour", paste0("dksz_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("dksz_", palette), palette = pal, na.value = "grey70", ...)
   } else {
-    ggplot2::scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradientn(colours = pal(256), na.value = "grey70", ...)
   }
 }
