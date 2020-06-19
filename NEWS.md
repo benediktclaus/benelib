@@ -1,6 +1,7 @@
 # benelib 0.1.1
 
-* Added a rmarkdown template for costat topics.
+* Added an rmarkdown template for costat topics.
+* Added an rmarkdown template for small personal reports.
 
 # benelib 0.1.0
 
