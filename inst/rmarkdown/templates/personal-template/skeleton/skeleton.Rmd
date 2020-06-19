@@ -1,0 +1,29 @@
+---
+lang: de
+title: "Report Title"
+author: "Benedikt Claus"
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+documentclass: scrartcl
+classoption:
+- 11pt
+- ngerman
+output:
+  bookdown::pdf_document2:
+    toc: no
+    citation_package: biblatex
+    extra_dependencies:
+      microtype: null
+      csquotes: null
+      caption: ["format=plain", "justification=justified", "singlelinecheck=no", "labelfont=bf"]
+      booktabs: null
+      blindtext: null
+# bibliography: references.bib
+biblio-style: apa
+biblio-title: Literatur
+linkcolor: RoyalBlue
+citecolor: RoyalBlue
+urlcolor: RoyalBlue
+---
+
+# Ziel
+Hier steht das Ziel.
