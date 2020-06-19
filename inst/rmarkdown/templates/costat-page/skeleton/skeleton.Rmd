@@ -1,0 +1,69 @@
+---
+title: "Topic Title"
+bibliography: references.bib
+link-citations: yes
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- Only when working on it -->
+```{r echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(fig.align = "center", dpi = 350)
+ggplot2::theme_set(ggplot2::theme_minimal())
+
+
+library(benelib)
+library(patchwork)
+```
+
+
+<!-- Use this after finalizing work -->
+<!-- ```{r echo=FALSE, message=FALSE} -->
+<!-- knitr::read_chunk("setup.R") -->
+<!-- ``` -->
+
+<!-- ```{r echo=FALSE, message=FALSE} -->
+<!-- <<setup>> -->
+<!-- ``` -->
+
+<!-- Spanner Image -->
+![]()
+
+Dieses Verfahren...
+
+# Pakete 
+Alle Berechnungen und Abbildungen können wir mit unseren [Standardpaketen](pakete.html) durchführen. Wir benötigen das `tidyverse` zum Data Wrangling und zur Visualisierung der Daten. `haven` benötigen wir für den Import von SPSS-Dateien und `rstatix` für statistische Analysen. Wenn man sich den Import und das Bereinigen der Daten sparen möchte (Schritte, die man dennoch üben sollte), findet man die Daten auch im Paket `costatcompanion`.
+
+```{r message=FALSE}
+library(tidyverse)
+library(haven)
+library(rstatix)
+library(costatcompanion)
+```
+
+# Beispiel
+## Klassisch
+### Voraussetzungen
+### EDA
+### Durchführung
+### Berichten
+
+## Robust
+
+
+## Non-parametrisch
+
+
+# Aus der Praxis
+## Klassisch
+### EDA
+### Durchführung
+### Berichten
+
+## Robust
+
+## Non-parametrisch
+
+
+# Literatur
