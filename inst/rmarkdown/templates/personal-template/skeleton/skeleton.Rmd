@@ -17,6 +17,7 @@ output:
       caption: ["format=plain", "justification=justified", "singlelinecheck=no", "labelfont=bf"]
       booktabs: null
       blindtext: null
+      mathpazo: null
 # bibliography: references.bib
 biblio-style: apa
 biblio-title: Literatur
