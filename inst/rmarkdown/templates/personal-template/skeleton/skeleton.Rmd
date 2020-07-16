@@ -24,6 +24,8 @@ biblio-title: Literatur
 linkcolor: RoyalBlue
 citecolor: RoyalBlue
 urlcolor: RoyalBlue
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Ziel
