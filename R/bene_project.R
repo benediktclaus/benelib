@@ -21,13 +21,13 @@ bene_project <- function(path, ...) {
   dir.create(path = file.path(path, "99 Miscellaneous"), recursive = TRUE, showWarnings = TRUE)
 
   # Create Cleaning and Analyses Files
-  file.create(file.path(path, "03 R", "data cleaning.R"), showWarnings = FALSE)
+  file.create(file.path(path, "03 R", "data-cleaning.R"), showWarnings = FALSE)
   file.create(file.path(path, "03 R", "analyses.R"), showWarnings = FALSE)
 
   # Document Preambles
   cleaning_preamble <- paste(c("library(tidyverse)", "library(janitor)", "library(haven)"), collapse = "\n")
   analyses_preamble <- paste(c("library(tidyverse)", "library(benelib)"), collapse = "\n")
 
-  writeLines(cleaning_preamble, con = file(file.path(path, "03 R", "data cleaning.R")))
+  writeLines(cleaning_preamble, con = file(file.path(path, "03 R", "data-cleaning.R")))
   writeLines(analyses_preamble, con = file(file.path(path, "03 R", "analyses.R")))
 }
