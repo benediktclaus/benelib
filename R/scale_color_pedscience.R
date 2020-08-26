@@ -4,14 +4,15 @@
 #'
 #' @param palette String, the color palette to use (defaults to \code{"main"}).
 #'   There are several options available: \code{"main"}, \code{"playful"},
-#'   \code{"heat"} (for heat maps), \code{"full"}, \code{"decent"}, and
-#'   \code{"bright"}.
+#'   \code{"heat"} (for heat maps), \code{"heat_mono"} (for monochromatic
+#'   heatmaps), \code{"full"}, \code{"decent"}, and \code{"bright"}.
 #' @param discrete Logical, defaults to \code{TRUE}. Set to \code{FALSE} when
 #'   using a continuous scale.
 #' @param reverse Logical, defaults to \code{FALSE}. Setting this to \code{TRUE}
 #'   changes the order of the colors.
 #' @param na.value String, the color for NA values.
-#' @param ... Additional arguments passed to \code{\link[ggplot2]{scale_color_gradientn}}.
+#' @param ... Additional arguments passed to
+#'   \code{\link[ggplot2]{scale_color_gradientn}}.
 #'
 #' @return The PedScience color scale for ggplot2.
 #' @export

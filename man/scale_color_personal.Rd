@@ -15,8 +15,8 @@ scale_color_personal(
 \arguments{
 \item{palette}{String, the color palette to use (defaults to \code{"main"}).
 There are several options available: \code{"main"}, \code{"playful"},
-\code{"heat"} (for heat maps), \code{"full"}, \code{"decent"}, and
-\code{"bright"}.}
+\code{"heat"} (for heat maps), \code{"heat_mono"} (for monochromatic
+heatmaps), \code{"full"}, \code{"decent"}, and \code{"bright"}.}
 
 \item{discrete}{Logical, defaults to \code{TRUE}. Set to \code{FALSE} when
 using a continuous scale.}
@@ -26,7 +26,8 @@ changes the order of the colors.}
 
 \item{na.value}{String, the color for NA values.}
 
-\item{...}{Additional arguments passed to \code{\link[ggplot2]{scale_color_gradientn}}.}
+\item{...}{Additional arguments passed to
+\code{\link[ggplot2]{scale_color_gradientn}}.}
 }
 \value{
 My personal color scale for ggplot2.

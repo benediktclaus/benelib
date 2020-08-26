@@ -1,7 +1,7 @@
 Package: benelib
 Type: Package
 Title: Various Helper Functions for My R Workflow
-Version: 0.1.2
+Version: 0.1.4
 Authors@R: person("Benedikt", "Claus", email = "b.claus@pedscience.de", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9501-0954"))
 Description: Various helper functions for commonly executed tasks and color schemes for my scientific workflow.
 URL: https://github.com/benediktclaus/benelib

@@ -4,7 +4,8 @@ pedscience_colors <- c(
   "coral"      = "#e04313",
   "baby_blue"  = "#00b0d1",
   "dark_grey"  = "#4c4949",
-  "light_grey" = "#9198a8"
+  "light_grey" = "#9198a8",
+  "light_blue" = "#C0D3F0"
 )
 
 #' Extract colors for PedScience by name
@@ -25,12 +26,13 @@ pedscience_cols <- function(...) {
 
 # Palettes, based on defined colors
 pedscience_palettes <- list(
-  "main"     = pedscience_cols("blue", "light_grey", "coral"),
-  "playful"  = pedscience_cols("blue", "coral", "baby_blue"),
-  "heat"     = pedscience_cols("blue", "coral"),
-  "full"     = pedscience_cols("blue", "coral", "dark_grey", "baby_blue"),
-  "decent"   = pedscience_cols("blue", "dark_grey", "light_grey"),
-  "bright"   = pedscience_cols("coral", "light_grey", "baby_blue")
+  "main"      = pedscience_cols("blue", "light_grey", "coral"),
+  "playful"   = pedscience_cols("blue", "coral", "baby_blue"),
+  "heat"      = pedscience_cols("blue", "coral"),
+  "heat_mono" = pedscience_cols("light_blue", "blue"),
+  "full"      = pedscience_cols("blue", "coral", "dark_grey", "baby_blue"),
+  "decent"    = pedscience_cols("blue", "dark_grey", "light_grey"),
+  "bright"    = pedscience_cols("coral", "light_grey", "baby_blue")
 )
 
 #' Extract colors based on palette
