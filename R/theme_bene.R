@@ -29,7 +29,7 @@ theme_bene <- function(base_size = 11) {
     base_size = base_size
   ) %+replace%
     theme(
-      text = element_text(family = "Roboto"),
+      text = element_text(family = "Roboto", color = "black"),
       legend.position = "bottom"
     )
 }
