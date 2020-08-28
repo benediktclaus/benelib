@@ -26,7 +26,7 @@ bene_project <- function(path, ...) {
 
   # Document Preambles
   cleaning_preamble <- paste(c("library(tidyverse)", "library(janitor)", "library(haven)"), collapse = "\n")
-  analyses_preamble <- paste(c("library(tidyverse)", "library(benelib)"), collapse = "\n")
+  analyses_preamble <- paste(c("library(tidyverse)", "library(benelib)", "library(extrafonts)", "", "theme_set(theme_bene())"), collapse = "\n")
 
   writeLines(cleaning_preamble, con = file(file.path(path, "03 R", "data-cleaning.R")))
   writeLines(analyses_preamble, con = file(file.path(path, "03 R", "analyses.R")))
