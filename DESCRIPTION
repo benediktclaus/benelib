@@ -16,7 +16,8 @@ Imports:
     grDevices,
     purrr,
     tibble,
-    tidyr
+    tidyr,
+    magrittr
 Suggests: 
     dplyr,
     rmarkdown
