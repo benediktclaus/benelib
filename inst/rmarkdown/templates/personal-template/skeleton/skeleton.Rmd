@@ -37,6 +37,7 @@ library(tidyverse)
 library(extrafont)
 library(benelib)
 library(here)
+library(gt)
 
 theme_set(theme_bene())
 ```
