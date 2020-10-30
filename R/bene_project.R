@@ -18,6 +18,7 @@ bene_project <- function(path, ...) {
   dir.create(path = file.path(path, "04 Figures"), recursive = TRUE, showWarnings = TRUE)
   dir.create(path = file.path(path, "05 Reports"), recursive = TRUE, showWarnings = TRUE)
   dir.create(path = file.path(path, "06 Literature"), recursive = TRUE, showWarnings = TRUE)
+  dir.create(path = file.path(path, "07 Paper"), recursive = TRUE, showWarnings = TRUE)
   dir.create(path = file.path(path, "99 Miscellaneous"), recursive = TRUE, showWarnings = TRUE)
 
   # Create Cleaning and Analyses Files
@@ -25,8 +26,8 @@ bene_project <- function(path, ...) {
   file.create(file.path(path, "03 R", "analyses.R"), showWarnings = FALSE)
 
   # Document Preambles
-  cleaning_preamble <- paste(c("library(tidyverse)", "library(janitor)", "library(haven)"), collapse = "\n")
-  analyses_preamble <- paste(c("library(tidyverse)", "library(benelib)", "library(extrafont)", "", "theme_set(theme_bene())",
+  cleaning_preamble <- paste(c("library(tidyverse)", "library(janitor)", "library(haven)", "library(labelled)"), collapse = "\n")
+  analyses_preamble <- paste(c("library(tidyverse)", "library(benelib)", "", "theme_set(theme_bene())",
                                "", "", "# Data Import -------------------------------------------------------------"), collapse = "\n")
 
   writeLines(cleaning_preamble, con = file(file.path(path, "03 R", "data-cleaning.R")))
