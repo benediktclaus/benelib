@@ -4,7 +4,7 @@
 #' Roboto as default font. To use the font, the package \code{extrafont} must be
 #' loaded.
 #'
-#' @import ggplot2
+#' @import ggplot2 extrafont
 #'
 #' @param base_size Integer, the text base size
 #'
