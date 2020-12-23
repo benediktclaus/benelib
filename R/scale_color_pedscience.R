@@ -2,6 +2,7 @@
 #'
 #' Color scale using the PedScience color scheme in ggplot2.
 #'
+#'
 #' @param palette String, the color palette to use (defaults to \code{"main"}).
 #'   There are several options available: \code{"main"}, \code{"playful"},
 #'   \code{"heat"} (for heat maps), \code{"heat_mono"} (for monochromatic
@@ -11,13 +12,14 @@
 #' @param reverse Logical, defaults to \code{FALSE}. Setting this to \code{TRUE}
 #'   changes the order of the colors.
 #' @param na.value String, the color for NA values.
-#' @param ... Additional arguments passed to
-#'   \code{\link[ggplot2]{scale_color_gradientn}}.
+#' @param ... Additional arguments passed to [ggplot2::scale_color_gradientn()].
 #'
 #' @return The PedScience color scale for ggplot2.
 #' @export
+#' @md
 #'
 #' @seealso \code{\link{scale_fill_pedscience}}
+#'
 #'
 #' @examples
 #' library(ggplot2)

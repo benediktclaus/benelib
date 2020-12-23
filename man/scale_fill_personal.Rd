@@ -26,8 +26,7 @@ changes the order of the colors.}
 
 \item{na.value}{String, the color for NA values.}
 
-\item{...}{Additional arguments passed to
-\code{\link[ggplot2]{scale_color_gradientn}}.}
+\item{...}{Additional arguments passed to \code{\link[ggplot2:scale_gradient]{ggplot2::scale_color_gradientn()}}.}
 }
 \value{
 My personal fill scale for ggplot2.
