@@ -17,7 +17,8 @@ Imports:
     tibble,
     tidyr,
     magrittr,
-    gt
+    gt,
+    gtsummary
 Suggests: 
     dplyr,
     rmarkdown
