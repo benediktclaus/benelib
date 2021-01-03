@@ -36,14 +36,12 @@ base_plot +
 All of those contain six different palettes to fulfill everyone’s needs.
 These palettes are
 
-  - `main`,
-  - `plaful`,
-  - `heat` (for heatmaps),
-  - `full` (which includes all colors),
-  - `decent`, and
-  - `bright`.
-
-<!-- end list -->
+-   `main`,
+-   `plaful`,
+-   `heat` (for heatmaps),
+-   `full` (which includes all colors),
+-   `decent`, and
+-   `bright`.
 
 ``` r
 base_plot +
