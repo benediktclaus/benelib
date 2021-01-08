@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# benelib <img src="tools/hexsticker.png" width = "200" align="right"/>
+# benelib <img src="tools/hexsticker.png" width = "160" align="right"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -21,8 +21,6 @@ You can install and load the released version of `benelib` from
 # install.packages("devtools")
 # devtools::install_github("benediktclaus/benelib")
 library(benelib)
-#> Loading required package: extrafont
-#> Registering fonts with R
 ```
 
 ## Examples
@@ -42,7 +40,7 @@ palmer_penguins %>%
   scale_color_personal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-example-color-scale-1.png" width="100%" />
 
 ### Plot themes
 
@@ -56,4 +54,4 @@ palmer_penguins %>%
   theme_bene()
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-example-theme-1.png" width="100%" />

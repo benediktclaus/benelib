@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# benelib <img src="tools/hexsticker.png" width = "200" align="right"/>
+# benelib <img src="tools/hexsticker.png" width = "160" align="right"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -25,7 +25,7 @@ The goal of `benelib` is to make my life considerably easier. This package inclu
 
 You can install and load the released version of `benelib` from [GitHub](https://github.com/) with:
 
-```{r}
+```{r message=FALSE}
 # install.packages("devtools")
 # devtools::install_github("benediktclaus/benelib")
 library(benelib)
@@ -36,7 +36,7 @@ library(benelib)
 ### Color and fill scales
 One of the main reasons for this package to exist is the abilty to change `ggplot2`'s default color and fill scales to a given corporate design.
 
-```{r}
+```{r example-color-scale}
 library(ggplot2)
 
 palmer_penguins %>% 
@@ -48,7 +48,7 @@ palmer_penguins %>%
 ### Plot themes
 Another nice addition is my personal `ggplot2` theme.
 
-```{r}
+```{r example-theme}
 palmer_penguins %>% 
   ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point() +
