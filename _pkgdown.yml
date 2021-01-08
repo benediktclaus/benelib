@@ -29,4 +29,3 @@ reference:
   - contents:
     - palmer_penguins
     - to_tibble
-    - bene_project
