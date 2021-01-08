@@ -1,3 +1,14 @@
+#' Personal Color and Fill Scale
+#'
+#' These color and fill functions are useful for generating my personal color
+#' scheme for `ggplot2` plots.
+#'
+#' @inheritParams scale_color_pedscience
+#'
+#' @name scale-personal
+#' @md
+NULL
+
 # Vector with defined colors for personal color scheme
 personal_colors <- c(
   "blue"       = "#004358",
@@ -9,8 +20,6 @@ personal_colors <- c(
 )
 
 #' Extract colors for personal color scheme by name
-#'
-#' @param ... Strings, the palettes, that should be used.
 #'
 #' @return Hex-values for colors based on string imput.
 #' @noRd
@@ -36,8 +45,6 @@ personal_palettes <- list(
 
 #' Extract colors based on palette for personal color scheme
 #'
-#' @inheritParams scale_color_pedscience
-#'
 #' @return Hex-values for the used palette.
 #' @noRd
 personal_pal <- function(palette = "main", reverse = FALSE, ...) {
@@ -46,4 +53,30 @@ personal_pal <- function(palette = "main", reverse = FALSE, ...) {
   if (reverse) pal <- rev(pal)
 
   grDevices::colorRampPalette(pal, ...)
+}
+
+
+#' @rdname scale-personal
+scale_color_personal <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
+  pal <- personal_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
+
+  if (discrete) {
+    ggplot2::discrete_scale("colour", paste0("personal_", palette), palette = pal, na.value = na_value, ...)
+  } else {
+    ggplot2::scale_color_gradientn(colours = pal(256), na.value = na_value, ...)
+  }
+}
+
+
+#' @rdname scale-personal
+scale_fill_personal <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
+  pal <- personal_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
+
+  if (discrete) {
+    ggplot2::discrete_scale("fill", scale_name = paste0("personal_", palette), palette = pal, na.value = na_value, ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colours = pal(256), na.value = na_value, ...)
+  }
 }

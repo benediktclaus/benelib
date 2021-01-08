@@ -1,7 +1,18 @@
+#' Palli Color and Fill Scale
+#'
+#' These color and fill functions are useful for generating the Palli color
+#' scheme for `ggplot2` plots.
+#'
+#' @inheritParams scale_color_pedscience
+#'
+#' @name scale-palli
+#' @md
+NULL
+
 # Vector with defined colors for Palliativzentrum
 palli_colors <- c(
   "green"   = "#94c11f",
-  "orange"     = "#ed8a0d",
+  "orange"  = "#ed8a0d",
   "yellow"  = "#fbb900",
   "blue"    = "#009fe3",
   "grey"    = "#bebebe"
@@ -37,8 +48,6 @@ palli_palettes <- list(
 
 #' Extract colors based on palette
 #'
-#' @inheritParams pedscience_pal
-#'
 #' @return Hex-values for the used palette.
 #' @noRd
 palli_pal <- function(palette = "main", reverse = FALSE, ...) {
@@ -47,4 +56,30 @@ palli_pal <- function(palette = "main", reverse = FALSE, ...) {
   if (reverse) pal <- rev(pal)
 
   grDevices::colorRampPalette(pal, ...)
+}
+
+
+#' @rdname scale-palli
+scale_color_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
+  pal <- palli_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
+
+  if (discrete) {
+    ggplot2::discrete_scale("colour", paste0("palli_", palette), palette = pal, na.value = na_value, ...)
+  } else {
+    ggplot2::scale_color_gradientn(colours = pal(256), na.value = na_value, ...)
+  }
+}
+
+
+#' @rdname scale-palli
+scale_fill_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
+  pal <- palli_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
+
+  if (discrete) {
+    ggplot2::discrete_scale("fill", scale_name = paste0("palli_", palette), palette = pal, na.value = "grey80", ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colours = pal(256), na.value = "grey80", ...)
+  }
 }

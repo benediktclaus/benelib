@@ -1,3 +1,14 @@
+#' DKSZ Color and Fill Scale
+#'
+#' These color and fill functions are useful for generating the DKSZ color
+#' scheme for `ggplot2` plots.
+#'
+#' @inheritParams scale_color_pedscience
+#'
+#' @name scale-dksz
+#' @md
+NULL
+
 # Vector with defined colors
 dksz_colors <- c(
   "red"        = "#e52221",
@@ -37,8 +48,6 @@ dksz_palettes <- list(
 
 #' Extract colors based on palette
 #'
-#' @inheritParams scale_color_pedscience
-#'
 #' @return Hex-values for the used palette.
 #' @noRd
 dksz_pal <- function(palette = "main", reverse = FALSE, ...) {
@@ -47,4 +56,30 @@ dksz_pal <- function(palette = "main", reverse = FALSE, ...) {
   if (reverse) pal <- rev(pal)
 
   grDevices::colorRampPalette(pal, ...)
+}
+
+
+#' @rdname scale-dksz
+scale_color_dksz <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey70", ...) {
+  pal <- dksz_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
+
+  if (discrete) {
+    ggplot2::discrete_scale("colour", paste0("dksz_", palette), palette = pal, na.value = na_value, ...)
+  } else {
+    ggplot2::scale_color_gradientn(colours = pal(256), na.value = na_value, ...)
+  }
+}
+
+
+#' @rdname scale-dksz
+scale_fill_dksz <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey70", ...) {
+  pal <- dksz_pal(palette = palette, reverse = reverse)
+  na_value <- na.value
+
+  if (discrete) {
+    ggplot2::discrete_scale("fill", scale_name = paste0("dksz_", palette), palette = pal, na.value = na_value, ...)
+  } else {
+    ggplot2::scale_fill_gradientn(colours = pal(256), na.value = na_value, ...)
+  }
 }
