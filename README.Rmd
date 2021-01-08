@@ -24,11 +24,11 @@ The goal of `benelib` is to make my life considerably easier. This package inclu
 
 ## Installation
 
-You can install and load the released version of `benelib` from [GitHub](https://github.com/) with:
+You can install and loaded the released version of `benelib` from [GitHub](https://github.com/) with:
 
-```{r message=FALSE}
+```{r eval=FALSE}
 # install.packages("devtools")
-# devtools::install_github("benediktclaus/benelib")
+devtools::install_github("benediktclaus/benelib")
 library(benelib)
 ```
 
@@ -36,6 +36,11 @@ library(benelib)
 ## Examples
 ### Color and fill scales
 One of the main reasons for this package to exist is the abilty to change `ggplot2`'s default color and fill scales to a given corporate design.
+
+```{r include=FALSE}
+library(benelib)
+```
+
 
 ```{r example-color-scale}
 library(ggplot2)

@@ -4,6 +4,8 @@
 # benelib <img src="man/figures/hexsticker.png" width = "160" align="right"/>
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/benediktclaus/benelib/workflows/R-CMD-check/badge.svg)](https://github.com/benediktclaus/benelib/actions)
 <!-- badges: end -->
 
 ## My personal R library
@@ -14,12 +16,12 @@ projects or R Markdown templates and a few things more.
 
 ## Installation
 
-You can install and load the released version of `benelib` from
+You can install and loaded the released version of `benelib` from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-# devtools::install_github("benediktclaus/benelib")
+devtools::install_github("benediktclaus/benelib")
 library(benelib)
 ```
 
