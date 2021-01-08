@@ -20,7 +20,6 @@ loaded.
 \examples{
 library(ggplot2)
 
-# Change default color scale
 ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point() +
   theme_bene()

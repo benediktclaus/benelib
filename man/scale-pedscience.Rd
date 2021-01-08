@@ -43,6 +43,13 @@ scales.}
 These color and fill functions are useful for generating the PedScience color
 scheme for \code{ggplot2} plots.
 }
+\details{
+With these functions one can create custom color and fill scales according to
+the PedScience color scheme. Implemented are also various variations of the
+\code{maine} color palette. All scales can be used for discrete scales (default)
+or continuous scales (with \code{discrete = FALSE}). All scales can be reversed,
+if necessary, by setting the argumet \code{reverse = TRUE}.
+}
 \examples{
 library(ggplot2)
 

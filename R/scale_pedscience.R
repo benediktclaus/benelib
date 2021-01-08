@@ -3,6 +3,12 @@
 #' These color and fill functions are useful for generating the PedScience color
 #' scheme for `ggplot2` plots.
 #'
+#' With these functions one can create custom color and fill scales according to
+#' the PedScience color scheme. Implemented are also various variations of the
+#' `maine` color palette. All scales can be used for discrete scales (default)
+#' or continuous scales (with `discrete = FALSE`). All scales can be reversed,
+#' if necessary, by setting the argumet `reverse = TRUE`.
+#'
 #' @param palette String, the color palette to use (defaults to `main`). There
 #'   are several options available: `main`, `playful`, `heat` (for heat meaps),
 #'   `heat_mono` (for monochromatic heatmaps), `full`, `decent`, `bright`.

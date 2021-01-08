@@ -3,9 +3,28 @@
 #' These color and fill functions are useful for generating my personal color
 #' scheme for `ggplot2` plots.
 #'
+#' With these functions one can create custom color and fill scales according to
+#' my personal color scheme. Implemented are also various variations of the
+#' `maine` color palette. All scales can be used for discrete scales (default)
+#' or continuous scales (with `discrete = FALSE`). All scales can be reversed,
+#' if necessary, by setting the argumet `reverse = TRUE`.
+#'
 #' @inheritParams scale_color_pedscience
 #'
 #' @name scale-personal
+#'
+#' @examples
+#' library(ggplot2)
+#'
+#' # Change default color scale
+#' ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+#'   geom_point() +
+#'   scale_color_personal()
+#'
+#' # Change default fill scale
+#' ggplot(palmer_penguins, aes(species, bill_length_mm, fill = species)) +
+#'   geom_boxplot() +
+#'   scale_fill_personal()
 NULL
 
 # Vector with defined colors for personal color scheme
@@ -56,6 +75,7 @@ personal_pal <- function(palette = "main", reverse = FALSE, ...) {
 
 
 #' @rdname scale-personal
+#' @export
 scale_color_personal <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- personal_pal(palette = palette, reverse = reverse)
   na_value <- na.value
@@ -69,6 +89,7 @@ scale_color_personal <- function(palette = "main", discrete = TRUE, reverse = FA
 
 
 #' @rdname scale-personal
+#' @export
 scale_fill_personal <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- personal_pal(palette = palette, reverse = reverse)
   na_value <- na.value

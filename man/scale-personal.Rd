@@ -43,3 +43,23 @@ scales.}
 These color and fill functions are useful for generating my personal color
 scheme for \code{ggplot2} plots.
 }
+\details{
+With these functions one can create custom color and fill scales according to
+my personal color scheme. Implemented are also various variations of the
+\code{maine} color palette. All scales can be used for discrete scales (default)
+or continuous scales (with \code{discrete = FALSE}). All scales can be reversed,
+if necessary, by setting the argumet \code{reverse = TRUE}.
+}
+\examples{
+library(ggplot2)
+
+# Change default color scale
+ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+  geom_point() +
+  scale_color_personal()
+
+# Change default fill scale
+ggplot(palmer_penguins, aes(species, bill_length_mm, fill = species)) +
+  geom_boxplot() +
+  scale_fill_personal()
+}

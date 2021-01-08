@@ -3,9 +3,28 @@
 #' These color and fill functions are useful for generating the Palli color
 #' scheme for `ggplot2` plots.
 #'
+#' With these functions one can create custom color and fill scales according to
+#' the Palli color scheme. Implemented are also various variations of the
+#' `maine` color palette. All scales can be used for discrete scales (default)
+#' or continuous scales (with `discrete = FALSE`). All scales can be reversed,
+#' if necessary, by setting the argumet `reverse = TRUE`.
+#'
 #' @inheritParams scale_color_pedscience
 #'
 #' @name scale-palli
+#'
+#' @examples
+#' library(ggplot2)
+#'
+#' # Change default color scale
+#' ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+#'   geom_point() +
+#'   scale_color_palli()
+#'
+#' # Change default fill scale
+#' ggplot(palmer_penguins, aes(species, bill_length_mm, fill = species)) +
+#'   geom_boxplot() +
+#'   scale_fill_palli()
 NULL
 
 # Vector with defined colors for Palliativzentrum
@@ -59,6 +78,7 @@ palli_pal <- function(palette = "main", reverse = FALSE, ...) {
 
 
 #' @rdname scale-palli
+#' @export
 scale_color_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- palli_pal(palette = palette, reverse = reverse)
   na_value <- na.value
@@ -72,6 +92,7 @@ scale_color_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE
 
 
 #' @rdname scale-palli
+#' @export
 scale_fill_palli <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- palli_pal(palette = palette, reverse = reverse)
   na_value <- na.value
