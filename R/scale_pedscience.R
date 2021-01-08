@@ -16,6 +16,13 @@
 #'   scales.
 #'
 #' @name scale-pedscience
+#'
+#' @examples
+#' library(ggplot2)
+#'
+#' ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+#'   geom_point() +
+#'   scale_color_pedscience()
 NULL
 
 # Vector with defined colors
@@ -70,6 +77,7 @@ pedscience_pal <- function(palette = "main", reverse = FALSE, ...) {
 
 
 #' @rdname scale-pedscience
+#' @export
 scale_color_pedscience <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- pedscience_pal(palette = palette, reverse = reverse)
   na_value <- na.value
@@ -83,6 +91,7 @@ scale_color_pedscience <- function(palette = "main", discrete = TRUE, reverse = 
 
 
 #' @rdname scale-pedscience
+#' @export
 scale_fill_pedscience <- function(palette = "main", discrete = TRUE, reverse = FALSE, na.value = "grey80", ...) {
   pal <- pedscience_pal(palette = palette, reverse = reverse)
   na_value <- na.value
