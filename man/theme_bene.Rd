@@ -18,12 +18,10 @@ Roboto as default font. To use the font, the package \code{extrafont} must be
 loaded.
 }
 \examples{
-\dontrun{
 library(ggplot2)
-library(extrafont)
 
-ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+# Change default color scale
+ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point() +
   theme_bene()
-}
 }

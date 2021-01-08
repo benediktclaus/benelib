@@ -20,9 +20,15 @@
 #' @examples
 #' library(ggplot2)
 #'
+#' # Change default color scale
 #' ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
 #'   geom_point() +
 #'   scale_color_pedscience()
+#'
+#' # Change default fill scale
+#' ggplot(palmer_penguins, aes(species, bill_length_mm, fill = species)) +
+#'   geom_boxplot() +
+#'   scale_fill_pedscience()
 NULL
 
 # Vector with defined colors
