@@ -14,9 +14,11 @@
 #' @examples
 #' library(ggplot2)
 #'
+#' \dontrun{
 #' ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
 #'   geom_point() +
 #'   theme_bene()
+#' }
 theme_bene <- function(base_size = 11) {
   if (!"package:extrafont" %in% search()) {
     stop("To use theme_bene(), the extrafont package must be loaded. Try library(extrafont).")
