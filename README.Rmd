@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# benelib <img src="man/figures/hexsticker.png" width = "160" align="right"/>
+# benelib <img src="man/figures/logo.png" width = "160" align="right"/>
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/benediktclaus/benelib/workflows/R-CMD-check/badge.svg)](https://github.com/benediktclaus/benelib/actions)
