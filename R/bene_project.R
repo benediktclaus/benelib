@@ -6,30 +6,23 @@
 #' @param path Filepath where project should be created
 #' @param ... Optional arguments
 #'
-#' @return A file structure
+#' @importFrom fs dir_create file_copy
+#' @importFrom purrr walk
+#' @importFrom stringr str_glue
+#'
+#' @noRd
 bene_project <- function(path, ...) {
-  # Create Project File
-  dir.create(path = path, recursive = TRUE, showWarnings = FALSE)
+  # Create project file
+  dir_create(path = path)
 
-  # Create Subfolders
-  dir.create(path = file.path(path, "01 Raw Data"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "02 Data"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "03 R"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "04 Figures"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "05 Reports"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "06 Literature"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "07 Paper"), recursive = TRUE, showWarnings = TRUE)
-  dir.create(path = file.path(path, "99 Miscellaneous"), recursive = TRUE, showWarnings = TRUE)
+
+  # Create subfolders
+  folder_list <- list("01 Raw Data", "02 Data", "03 R", "04 Figures", "05 Reports", "06 Literature", "07 Paper", "99 Miscellaneous")
+  folder_list %>%
+    walk(~ dir_create(path = str_glue("{ path }/{ . }")))
+
 
   # Create Cleaning and Analyses Files
-  file.create(file.path(path, "03 R", "data-cleaning.R"), showWarnings = FALSE)
-  file.create(file.path(path, "03 R", "analyses.R"), showWarnings = FALSE)
-
-  # Document Preambles
-  cleaning_preamble <- paste(c("library(tidyverse)", "library(janitor)", "library(haven)", "library(labelled)"), collapse = "\n")
-  analyses_preamble <- paste(c("library(tidyverse)", "library(benelib)", "", "theme_set(theme_bene())",
-                               "", "", "# Data Import -------------------------------------------------------------"), collapse = "\n")
-
-  writeLines(cleaning_preamble, con = file(file.path(path, "03 R", "data-cleaning.R")))
-  writeLines(analyses_preamble, con = file(file.path(path, "03 R", "analyses.R")))
+  file_copy(path = "data-raw/script-templates/data-cleaning.R", new_path = str_glue("{ path }/03 R/data-cleaning.R"))
+  file_copy(path = "data-raw/script-templates/analyses.R", new_path = str_glue("{ path }/03 R/analyses.R"))
 }

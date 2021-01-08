@@ -19,7 +19,8 @@ Imports:
     magrittr,
     gt,
     gtsummary,
-    fs
+    fs,
+    stringr
 Suggests: 
     dplyr,
     rmarkdown,
