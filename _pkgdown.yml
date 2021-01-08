@@ -1,0 +1,32 @@
+home:
+  title: A personal R package to make life easier
+
+template:
+  opengraph:
+    image:
+      src: man/figures/hexsticker.png
+      alt: "benelib. A personal R Package."
+  params:
+    bootswatch: lumen
+
+reference:
+  - title: Color and Fill Scales
+    desc: >
+      These functiosn are useful to change ggplot2's default color and fill scales to a corporate design
+  - contents:
+    - starts_with("scale")
+  - title: ggplot2 Themes
+    desc: >
+      Custom ggplot2 themes
+  - contents:
+    - theme_bene
+  - title: gt Themes
+    desc: >
+      Themes for the gt package and gtsummary
+  - contents:
+    - starts_with("theme_gt")
+  - title: Other
+  - contents:
+    - palmer_penguins
+    - to_tibble
+    - bene_project

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# benelib <img src="tools/hexsticker.png" width = "160" align="right"/>
+# benelib <img src="man/figures/hexsticker.png" width = "160" align="right"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
