@@ -6,7 +6,6 @@
 #' @inheritParams scale_color_pedscience
 #'
 #' @name scale-personal
-#' @md
 NULL
 
 # Vector with defined colors for personal color scheme

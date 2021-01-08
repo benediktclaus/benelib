@@ -16,7 +16,6 @@
 #'   scales.
 #'
 #' @name scale-pedscience
-#' @md
 NULL
 
 # Vector with defined colors

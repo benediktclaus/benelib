@@ -6,7 +6,6 @@
 #' @inheritParams scale_color_pedscience
 #'
 #' @name scale-dksz
-#' @md
 NULL
 
 # Vector with defined colors

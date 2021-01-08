@@ -13,7 +13,6 @@
 #'
 #' @return An APA-like gtsummary table
 #' @export
-#' @md
 #'
 #' @seealso [theme_gt_apa()]
 #'
