@@ -43,3 +43,9 @@ scales.}
 These color and fill functions are useful for generating the PedScience color
 scheme for \code{ggplot2} plots.
 }
+\examples{
+library(ggplot2)
+ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+geom_point() +
+scale_color_pedscience()
+}
