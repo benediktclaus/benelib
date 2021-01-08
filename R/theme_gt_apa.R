@@ -1,12 +1,12 @@
 #' APA-Like Table Style
 #'
-#' Style a \code{gt} table minimally with an APA-like style.
+#' Style a `gt` table minimally with an APA-like style.
 #'
 #' @importFrom gt cols_align opt_table_lines tab_options
 #'
-#' @param table A \code{gt} table
+#' @param table A `gt` table
 #'
-#' @return A formatted \code{gt} table
+#' @return A formatted `gt` table
 #' @export
 #'
 #' @examples

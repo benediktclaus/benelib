@@ -1,7 +1,7 @@
 #' Custom Theme for ggplot2
 #'
-#' Custom \code{ggplot2} theme based on \code{theme_light()} but using Google's
-#' Roboto as default font. To use the font, the package \code{extrafont} must be
+#' Custom `ggplot2` theme based on `theme_light()` but using Google's
+#' Roboto as default font. To use the font, the package `extrafont` must be
 #' loaded.
 #'
 #' @import ggplot2 extrafont

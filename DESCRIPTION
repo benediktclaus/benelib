@@ -24,3 +24,4 @@ Suggests:
     rmarkdown
 Depends: 
     extrafont
+Roxygen: list(markdown = TRUE)

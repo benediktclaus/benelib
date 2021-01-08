@@ -1,6 +1,6 @@
 #' APA-like gtsummary theme
 #'
-#' Set an APA-like theme for \code{gtsummary} tables, i.e. means and standard
+#' Set an APA-like theme for `gtsummary` tables, i.e. means and standard
 #' deviations with two decimals are calculated for continuous variables, the
 #' Welch test (as the default t.test function in R calculates a Welch test) is
 #' the default statistical test for a two group comparison, and the method for
