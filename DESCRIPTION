@@ -23,5 +23,6 @@ Suggests:
     dplyr,
     rmarkdown
 Depends: 
-    extrafont
+    extrafont,
+    R (>= 2.10)
 Roxygen: list(markdown = TRUE)
