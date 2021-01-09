@@ -1,6 +1,10 @@
 home:
   title: A personal R package to make life easier
 
+authors:
+  Benedikt B. Claus:
+    href: "https://www.benediktclaus.com/"
+
 template:
   opengraph:
     image:
