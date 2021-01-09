@@ -12,17 +12,35 @@
 #'
 #' @noRd
 bene_project <- function(path, ...) {
+  arguments <- list(...)
+  template_path <- str_glue("{ .libPaths()[1] }/benelib/script-templates/")
+
   # Create project file
   dir_create(path = path)
 
 
   # Create subfolders
-  folder_list <- list("01 Raw Data", "02 Data", "03 R", "04 Figures", "05 Reports", "06 Literature", "07 Paper", "99 Miscellaneous")
+  folder_list <- list("01 Raw Data", "02 Data", "03 R", "04 Figures", "05 Reports", "06 Literature")
   folder_list %>%
     walk(~ dir_create(path = str_glue("{ path }/{ . }")))
 
 
-  # Create Cleaning and Analyses Files
-  file_copy(path = "data-raw/script-templates/data-cleaning.R", new_path = str_glue("{ path }/03 R/data-cleaning.R"))
-  file_copy(path = "data-raw/script-templates/analyses.R", new_path = str_glue("{ path }/03 R/analyses.R"))
+  # Include folder for article or miscellaneous files if checked
+  if (arguments[["article"]]) {
+    dir_create(str_glue("{ path }/07 Article"))
+  }
+
+  if (arguments[["misc"]]) {
+    dir_create(str_glue("{ path }/99 Miscellaneous"))
+  }
+
+
+  # Create Cleaning and Analyses Files if checked
+  if (arguments[["cleaning"]]) {
+    file_copy(path = str_glue("{ template_path }/data-cleaning.R"), new_path = str_glue("{ path }/03 R/data-cleaning.R"))
+  }
+
+  if (arguments[["analyses"]]) {
+    file_copy(path = str_glue("{ template_path }/analyses.R"), new_path = str_glue("{ path }/03 R/analyses.R"))
+  }
 }

@@ -2,3 +2,23 @@ Title: Personal Project
 Binding: bene_project
 Subtitle: Create a new personal project
 Icon: bene-logo.png
+
+Parameter: article
+Widget: CheckboxInput
+Label: Create article folder
+
+Parameter: misc
+Widget: CheckboxInput
+Label: Create miscellaneous folder
+
+Parameter: cleaning
+Widget: CheckboxInput
+Label: Include data cleaning script template
+Default: On
+Position: right
+
+Parameter: analyses
+Widget: CheckboxInput
+Label: Include analyses script template
+Default: On
+Position: right
