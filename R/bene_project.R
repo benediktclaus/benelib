@@ -13,7 +13,8 @@
 #' @noRd
 bene_project <- function(path, ...) {
   arguments <- list(...)
-  template_path <- str_glue("{ .libPaths()[1] }/benelib/script-templates/")
+  package_path <- find.package("benelib")
+  template_path <- str_glue("{ package_path }/script-templates/")
 
   # Create project file
   dir_create(path = path)
