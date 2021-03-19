@@ -37,8 +37,16 @@ bene_project <- function(path, ...) {
 
 
   # Create Cleaning and Analyses Files if checked
-  if (arguments[["cleaning"]]) {
-    file_copy(path = str_glue("{ template_path }/data-cleaning.R"), new_path = str_glue("{ path }/03 R/data-cleaning.R"))
+  if (arguments[["cleaning-csv"]]) {
+    file_copy(path = str_glue("{ template_path }/data-cleaning-csv.R"), new_path = str_glue("{ path }/03 R/data-cleaning.R"))
+  }
+
+  if (arguments[["cleaning-spss"]]) {
+    file_copy(path = str_glue("{ template_path }/data-cleaning-spss.R"), new_path = str_glue("{ path }/03 R/data-cleaning.R"))
+  }
+
+  if (arguments[["cleaning-excel"]]) {
+    file_copy(path = str_glue("{ template_path }/data-cleaning-excel.R"), new_path = str_glue("{ path }/03 R/data-cleaning.R"))
   }
 
   if (arguments[["analyses"]]) {

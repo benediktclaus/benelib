@@ -11,10 +11,22 @@ Parameter: misc
 Widget: CheckboxInput
 Label: Create miscellaneous folder
 
-Parameter: cleaning
+Parameter: cleaning-csv
 Widget: CheckboxInput
-Label: Include data cleaning script template
+Label: Include CSV cleaning script template
 Default: On
+Position: right
+
+Parameter: cleaning-spss
+Widget: CheckboxInput
+Label: Include SPSS cleaning script template
+Default: Off
+Position: right
+
+Parameter: cleaning-excel
+Widget: CheckboxInput
+Label: Include Excel cleaning script template
+Default: Off
 Position: right
 
 Parameter: analyses
