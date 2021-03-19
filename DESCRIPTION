@@ -4,7 +4,7 @@ Title: Various Helper Functions for My R Workflow
 Version: 0.4.0
 Authors@R: person("Benedikt B.", "Claus", email = "b.claus@pedscience.de", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9501-0954"))
 Description: Various helper functions for commonly executed tasks and color schemes for my scientific workflow.
-URL: https://github.com/benediktclaus/benelib
+URL: https://benediktclaus.github.io/benelib, https://github.com/benediktclaus/benelib
 BugReports: https://github.com/benediktclaus/benelib/issues
 License: GPL (>= 3)
 Encoding: UTF-8
