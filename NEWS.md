@@ -1,3 +1,7 @@
+# benelib 0.5.0
+
+* Added separate cleaning scripts for CS, SPSS, and Excel files
+
 # benelib 0.4.0
 
 * Added functionality to the RStudio template. Now, one can choose if certain directories or prepopulated files should be included in the project
