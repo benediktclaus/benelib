@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/index.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/palmer_penguins.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/scale-dksz.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/scale-palli.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/scale-pedscience.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/scale-personal.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/theme_bene.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/theme_gt_apa.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/theme_gtsummary_apa.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/to_tibble.html</loc>
+  </url>
+</urlset>
