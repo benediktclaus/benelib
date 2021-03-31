@@ -27,7 +27,7 @@ library(benelib)
 
 ## Examples
 
-### Color and fill scales
+### ggplot2 Colors and Fills
 
 One of the main reasons for this package to exist is the abilty to
 change `ggplot2`’s default color and fill scales to a given corporate
@@ -35,11 +35,11 @@ design.
 
 ``` r
 library(ggplot2)
+set_personal_theme()
 
 palmer_penguins %>% 
   ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
-  geom_point() +
-  scale_color_personal()
+  geom_point()
 ```
 
 <img src="man/figures/README-example-color-scale-1.png" width="100%" />
@@ -52,7 +52,6 @@ Another nice addition is my personal `ggplot2` theme.
 palmer_penguins %>% 
   ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point() +
-  scale_color_personal() +
   theme_bene()
 ```
 
