@@ -29,5 +29,5 @@ Suggests:
     janitor,
     labelled
 Depends: 
-    R (>= 2.10)
+    R (>= 4.0)
 Roxygen: list(markdown = TRUE)
