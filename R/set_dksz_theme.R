@@ -9,6 +9,20 @@
 #' @inheritParams set_pedscience_theme
 #'
 #' @export
+#' @examples
+#' library(ggplot2)
+#'
+#' # Ordinary ggplot2 plot
+#' test_plot <- palmer_penguins %>%
+#'   ggplot(aes(bill_length_mm, flipper_length_mm)) +
+#'   geom_smooth(method = "loess") +
+#'   geom_point(aes(color = species))
+#' test_plot
+#'
+#' # Setting the theme
+#' set_dksz_theme()
+#'
+#' test_plot
 set_dksz_theme <- function(accent = "red", palette = "main", reverse = FALSE) {
   dksz_colors <- c(
     "red"        = "#e52221",

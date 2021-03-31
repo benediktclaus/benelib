@@ -15,6 +15,20 @@
 #'   the order of the colors.
 #'
 #' @export
+#' @examples
+#' library(ggplot2)
+#'
+#' # Ordinary ggplot2 plot
+#' test_plot <- palmer_penguins %>%
+#'   ggplot(aes(bill_length_mm, flipper_length_mm)) +
+#'   geom_smooth(method = "loess") +
+#'   geom_point(aes(color = species))
+#' test_plot
+#'
+#' # Setting the theme
+#' set_pedscience_theme()
+#'
+#' test_plot
 set_pedscience_theme <- function(accent = "blue", palette = "main", reverse = FALSE) {
   pedscience_colors <- c(
     "blue"       = "#2356a3",

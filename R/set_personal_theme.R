@@ -9,7 +9,6 @@
 #' @inheritParams set_pedscience_theme
 #'
 #' @export
-#'
 #' @examples
 #' library(ggplot2)
 #'

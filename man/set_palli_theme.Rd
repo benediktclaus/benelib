@@ -21,3 +21,18 @@ the order of the colors.}
 Set the Palli color theme for ggplot2 plots. This is a more coherent
 version of theming using the thematic package.
 }
+\examples{
+library(ggplot2)
+
+# Ordinary ggplot2 plot
+test_plot <- palmer_penguins \%>\%
+  ggplot(aes(bill_length_mm, flipper_length_mm)) +
+  geom_smooth(method = "loess") +
+  geom_point(aes(color = species))
+test_plot
+
+# Setting the theme
+set_palli_theme()
+
+test_plot
+}
