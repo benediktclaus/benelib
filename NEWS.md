@@ -1,3 +1,5 @@
+# benelib 0.6.0
+
 # benelib 0.5.0
 
 * Added separate cleaning scripts for CS, SPSS, and Excel files
