@@ -18,9 +18,9 @@ template:
 reference:
   - title: Color and Fill Scales
     desc: >
-      These functiosn are useful to change ggplot2's default color and fill scales to a corporate design
+      These functions are useful to change ggplot2's default color and fill scales to a corporate design
   - contents:
-    - starts_with("scale")
+    - matches("set_.*_theme")
   - title: ggplot2 Themes
     desc: >
       Custom ggplot2 themes

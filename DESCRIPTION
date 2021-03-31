@@ -12,7 +12,6 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
     ggplot2,
-    grDevices,
     purrr,
     tibble,
     tidyr,
@@ -20,7 +19,9 @@ Imports:
     gt,
     gtsummary,
     fs,
-    stringr
+    stringr,
+    showtext,
+    thematic
 Suggests: 
     dplyr,
     rmarkdown,
@@ -28,6 +29,5 @@ Suggests:
     janitor,
     labelled
 Depends: 
-    extrafont,
     R (>= 2.10)
 Roxygen: list(markdown = TRUE)

@@ -13,15 +13,14 @@ theme_bene(base_size = 11)
 Theme for ggplot2.
 }
 \description{
-Custom \code{ggplot2} theme based on \code{theme_light()} but using Google's
-Roboto as default font. To use the font, the package \code{extrafont} must be
-loaded.
+Custom \code{ggplot2} theme based on \code{theme_light()}.
 }
 \examples{
 library(ggplot2)
 
 \dontrun{
-ggplot(palmer_penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
+palmer_penguins \%>\%
+ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point() +
   theme_bene()
 }
