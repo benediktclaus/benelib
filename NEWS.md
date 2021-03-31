@@ -1,5 +1,7 @@
 # benelib 0.6.0
 
+* ggplot2 themes are rewritten from sratch employing the thematic package which is more consistent and stable.
+
 # benelib 0.5.0
 
 * Added separate cleaning scripts for CS, SPSS, and Excel files
