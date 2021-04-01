@@ -10,16 +10,19 @@
     <loc>https://benediktclaus.github.io/benelib/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>https://benediktclaus.github.io/benelib/reference/scale-dksz.html</loc>
+    <loc>https://benediktclaus.github.io/benelib/reference/remove_theme.html</loc>
   </url>
   <url>
-    <loc>https://benediktclaus.github.io/benelib/reference/scale-palli.html</loc>
+    <loc>https://benediktclaus.github.io/benelib/reference/set_dksz_theme.html</loc>
   </url>
   <url>
-    <loc>https://benediktclaus.github.io/benelib/reference/scale-pedscience.html</loc>
+    <loc>https://benediktclaus.github.io/benelib/reference/set_palli_theme.html</loc>
   </url>
   <url>
-    <loc>https://benediktclaus.github.io/benelib/reference/scale-personal.html</loc>
+    <loc>https://benediktclaus.github.io/benelib/reference/set_pedscience_theme.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/set_personal_theme.html</loc>
   </url>
   <url>
     <loc>https://benediktclaus.github.io/benelib/reference/theme_bene.html</loc>
