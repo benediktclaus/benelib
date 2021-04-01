@@ -34,7 +34,7 @@ set_personal_theme <- function(accent = "blue", palette = "main", reverse = FALS
   )
 
   personal_palettes <- list(
-    "main"     = personal_colors[c("blue", "dark_green", "green")],
+    "main"     = personal_colors[c("blue", "green", "yellow")],
     "playful"  = personal_colors[c("dark_green", "green", "yellow")],
     "full"     = personal_colors[c("blue", "dark_green", "green", "yellow", "orange")],
     "decent"   = personal_colors[c("blue", "dark_green", "grey")],
