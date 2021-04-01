@@ -40,11 +40,11 @@ set_pedscience_theme <- function(accent = "blue", palette = "main", reverse = FA
   )
 
   pedscience_palettes <- list(
-    "main"      = pedscience_colors[c("blue", "light_grey", "coral")],
+    "main"      = pedscience_colors[c("blue", "coral", "light_grey")],
     "playful"   = pedscience_colors[c("blue", "coral", "baby_blue")],
     "full"      = pedscience_colors[c("blue", "coral", "dark_grey", "baby_blue")],
     "decent"    = pedscience_colors[c("blue", "dark_grey", "light_grey")],
-    "bright"    = pedscience_colors[c("coral", "light_grey", "baby_blue")]
+    "bright"    = pedscience_colors[c("coral", "baby_blue", "light_grey")]
   )
 
   chosen_palette <- purrr::pluck(pedscience_palettes, palette)
