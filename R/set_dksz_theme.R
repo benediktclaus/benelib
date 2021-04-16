@@ -25,19 +25,20 @@
 #' test_plot
 set_dksz_theme <- function(accent = "red", palette = "main", reverse = FALSE) {
   dksz_colors <- c(
-    "red"        = "#e52221",
-    "green"      = "#00803d",
-    "black"      = "#363c44",
-    "yellow"     = "#ff9900",
-    "grey"       = "#999594"
+    "red"        = "#d70014",
+    "orange"     = "#eb6e00",
+    "green"      = "#5fa916",
+    "blue"       = "#0094e6",
+    "purple"     = "#ff9900",
+    "grey"       = "#787878"
   )
 
   dksz_palettes <- list(
-    "main"      = dksz_colors[c("red", "green", "black")],
-    "playful"   = dksz_colors[c("red", "green", "yellow")],
-    "full"      = dksz_colors[c("red", "green", "yellow", "black", "grey")],
-    "decent"    = dksz_colors[c("green", "black", "grey")],
-    "bright"    = dksz_colors[c("green", "yellow", "grey")]
+    "main"      = dksz_colors[c("red", "orange", "green")],
+    "playful"   = dksz_colors[c("orange", "green", "blue")],
+    "full"      = dksz_colors[c("red", "orange", "green", "blue", "purple", "grey")],
+    "decent"    = dksz_colors[c("red", "blue", "grey")],
+    "bright"    = dksz_colors[c("red", "green", "blue")]
   )
 
   chosen_palette <- purrr::pluck(dksz_palettes, palette)
