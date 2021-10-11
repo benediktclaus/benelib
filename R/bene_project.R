@@ -16,7 +16,7 @@ bene_project <- function(path, ...) {
   package_path <- find.package("benelib")
   template_path <- str_glue("{ package_path }/script-templates/")
 
-  # Create project file
+  # Create project folder
   dir_create(path = path)
 
 

@@ -23,7 +23,7 @@
 #' set_palli_theme()
 #'
 #' test_plot
-set_palli_theme <- function(accent = "green", palette = "main", reverse = FALSE) {
+set_palli_theme <- function(accent = "green", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   palli_colors <- c(
     "green"   = "#94c11f",
     "orange"  = "#ed8a0d",
@@ -51,6 +51,6 @@ set_palli_theme <- function(accent = "green", palette = "main", reverse = FALSE)
     accent = palli_colors[[accent]],
     sequential = sequential_gradient(fg_weight = 0, bg_weight = 0.9, fg_low = FALSE),
     qualitative = chosen_palette,
-    font = "Roboto"
+    font = font_spec(font, font_scale)
   )
 }

@@ -4,7 +4,13 @@
 \alias{set_personal_theme}
 \title{Set Personal Theme}
 \usage{
-set_personal_theme(accent = "blue", palette = "main", reverse = FALSE)
+set_personal_theme(
+  accent = "blue",
+  palette = "main",
+  font = "Roboto",
+  font_scale = 1,
+  reverse = FALSE
+)
 }
 \arguments{
 \item{accent}{String, the accent color to choose (defaults to \code{blue}). There
@@ -13,6 +19,10 @@ are several options available: \code{dark_green}, \code{green}, \code{yellow}, \
 
 \item{palette}{String, the color palette to use (defaults to \code{main}). There
 are several options available: \code{main}, \code{playful}, \code{full}, \code{decent}, \code{bright}.}
+
+\item{font}{String, a font of choice (defaults to Roboto)}
+
+\item{font_scale}{Integer, scaling factor for fonts (defaults to 1)}
 
 \item{reverse}{Logical, defaults to \code{FALSE}. Setting this to \code{TRUE} changes
 the order of the colors.}

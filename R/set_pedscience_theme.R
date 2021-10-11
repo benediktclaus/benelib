@@ -4,7 +4,7 @@
 #' version of theming using the thematic package.
 #'
 #' @importFrom purrr pluck
-#' @importFrom thematic thematic_on sequential_gradient
+#' @importFrom thematic thematic_on sequential_gradient font_spec
 #'
 #' @param accent String, the accent color to choose (defaults to `blue`). There
 #'   are several options available: `blue`, `coral`, `baby_blue`, `dark_grey`,
@@ -13,6 +13,8 @@
 #'   are several options available: `main`, `playful`, `full`, `decent`, `bright`.
 #' @param reverse Logical, defaults to `FALSE`. Setting this to `TRUE` changes
 #'   the order of the colors.
+#' @param font String, a font of choice (defaults to Roboto)
+#' @param font_scale Integer, scaling factor for fonts (defaults to 1)
 #'
 #' @export
 #' @examples
@@ -29,7 +31,7 @@
 #' set_pedscience_theme()
 #'
 #' test_plot
-set_pedscience_theme <- function(accent = "blue", palette = "main", reverse = FALSE) {
+set_pedscience_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   pedscience_colors <- c(
     "blue"       = "#2356a3",
     "coral"      = "#e04313",
@@ -57,7 +59,7 @@ thematic_on(
   accent = pedscience_colors[[accent]],
   sequential = sequential_gradient(fg_weight = 0, bg_weight = 0.9, fg_low = FALSE),
   qualitative = chosen_palette,
-  font = "Roboto"
+  font = font_spec(font, font_scale)
 )
 }
 

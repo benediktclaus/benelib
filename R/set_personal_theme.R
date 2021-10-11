@@ -23,7 +23,7 @@
 #' set_personal_theme()
 #'
 #' test_plot
-set_personal_theme <- function(accent = "blue", palette = "main", reverse = FALSE) {
+set_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   personal_colors <- c(
     "blue"       = "#004358",
     "dark_green" = "#1F8A70",
@@ -52,6 +52,6 @@ set_personal_theme <- function(accent = "blue", palette = "main", reverse = FALS
     accent = personal_colors[[accent]],
     sequential = sequential_gradient(fg_weight = 0, bg_weight = 0.9, fg_low = FALSE),
     qualitative = chosen_palette,
-    font = "Roboto"
+    font = font_spec(font, font_scale)
   )
 }

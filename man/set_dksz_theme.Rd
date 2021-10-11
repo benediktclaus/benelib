@@ -4,7 +4,13 @@
 \alias{set_dksz_theme}
 \title{Set DKSZ Theme}
 \usage{
-set_dksz_theme(accent = "red", palette = "main", reverse = FALSE)
+set_dksz_theme(
+  accent = "red",
+  palette = "main",
+  font = "Roboto",
+  font_scale = 1,
+  reverse = FALSE
+)
 }
 \arguments{
 \item{accent}{String, the accent color to choose (defaults to \code{red}). There
@@ -13,6 +19,10 @@ are several options available: \code{red}, \code{green}, \code{black}, \code{yel
 
 \item{palette}{String, the color palette to use (defaults to \code{main}). There
 are several options available: \code{main}, \code{playful}, \code{full}, \code{decent}, \code{bright}.}
+
+\item{font}{String, a font of choice (defaults to Roboto)}
+
+\item{font_scale}{Integer, scaling factor for fonts (defaults to 1)}
 
 \item{reverse}{Logical, defaults to \code{FALSE}. Setting this to \code{TRUE} changes
 the order of the colors.}

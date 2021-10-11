@@ -23,7 +23,7 @@
 #' set_dksz_theme()
 #'
 #' test_plot
-set_dksz_theme <- function(accent = "red", palette = "main", reverse = FALSE) {
+set_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   dksz_colors <- c(
     "red"        = "#d70014",
     "orange"     = "#eb6e00",
@@ -51,6 +51,6 @@ set_dksz_theme <- function(accent = "red", palette = "main", reverse = FALSE) {
     accent = dksz_colors[[accent]],
     sequential = sequential_gradient(fg_weight = 0, bg_weight = 0.9, fg_low = FALSE),
     qualitative = chosen_palette,
-    font = "Roboto"
+    font = font_spec(font, font_scale)
   )
 }
