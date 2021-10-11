@@ -1,3 +1,5 @@
+# benelib 0.7.0
+
 # benelib 0.6.0
 
 * ggplot2 themes are rewritten from sratch employing the thematic package which is more consistent and stable.
