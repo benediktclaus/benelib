@@ -82,7 +82,7 @@ version of theming using the thematic package." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">benelib</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0</span>
       </span>
     </div>
 
@@ -131,7 +131,13 @@ version of theming using the thematic package." />
 version of theming using the thematic package.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>set_palli_theme</span><span class='op'>(</span>accent <span class='op'>=</span> <span class='st'>"green"</span>, palette <span class='op'>=</span> <span class='st'>"main"</span>, reverse <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>set_palli_theme</span><span class='op'>(</span>
+  accent <span class='op'>=</span> <span class='st'>"green"</span>,
+  palette <span class='op'>=</span> <span class='st'>"main"</span>,
+  font <span class='op'>=</span> <span class='st'>"Roboto"</span>,
+  font_scale <span class='op'>=</span> <span class='fl'>1</span>,
+  reverse <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -146,6 +152,14 @@ are several options available: <code>green</code>, <code>orange</code>, <code>ye
       <th>palette</th>
       <td><p>String, the color palette to use (defaults to <code>main</code>). There
 are several options available: <code>main</code>, <code>playful</code>, <code>full</code>, <code>decent</code>, <code>bright</code>.</p></td>
+    </tr>
+    <tr>
+      <th>font</th>
+      <td><p>String, a font of choice (defaults to Roboto)</p></td>
+    </tr>
+    <tr>
+      <th>font_scale</th>
+      <td><p>Integer, scaling factor for fonts (defaults to 1)</p></td>
     </tr>
     <tr>
       <th>reverse</th>
