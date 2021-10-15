@@ -1,4 +1,8 @@
+# benelib 0.7.1
+
 # benelib 0.7.0
+
+* Included the correct font specification for themes
 
 # benelib 0.6.0
 
