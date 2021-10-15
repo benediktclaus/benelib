@@ -1,8 +1,10 @@
 # benelib 0.7.1
 
+* Patch to include an analysis paragraph in the analysis template.
+
 # benelib 0.7.0
 
-* Included the correct font specification for themes
+* Included the correct font specification for themes.
 
 # benelib 0.6.0
 
