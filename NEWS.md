@@ -1,3 +1,5 @@
+# benelib 0.8.0
+
 # benelib 0.7.1
 
 * Patch to include an analysis paragraph in the analysis template.
