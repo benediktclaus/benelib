@@ -20,9 +20,12 @@
 #' test_plot
 #'
 #' # Setting the theme
-#' set_personal_theme()
+#' use_personal_theme()
 #'
 #' test_plot
+#'
+#' # Remove theme
+#' use_base_theme()
 use_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   personal_colors <- c(
     "blue"       = "#004358",

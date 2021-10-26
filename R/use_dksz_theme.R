@@ -20,9 +20,12 @@
 #' test_plot
 #'
 #' # Setting the theme
-#' set_dksz_theme()
+#' use_dksz_theme()
 #'
 #' test_plot
+#'
+#' # Remove theme
+#' use_base_theme()
 use_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   dksz_colors <- c(
     "red"        = "#d70014",
