@@ -42,7 +42,10 @@ test_plot <- palmer_penguins \%>\%
 test_plot
 
 # Setting the theme
-set_dksz_theme()
+use_dksz_theme()
 
 test_plot
+
+# Remove theme
+use_base_theme()
 }

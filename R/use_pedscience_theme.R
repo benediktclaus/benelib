@@ -28,9 +28,12 @@
 #' test_plot
 #'
 #' # Setting the theme
-#' set_pedscience_theme()
+#' use_pedscience_theme()
 #'
 #' test_plot
+#'
+#' # Remove theme
+#' use_base_theme()
 use_pedscience_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   pedscience_colors <- c(
     "blue"       = "#2356a3",
