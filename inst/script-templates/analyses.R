@@ -2,7 +2,7 @@ library(tidyverse)
 library(benelib)
 
 theme_set(theme_bene())
-set_personal_theme()
+use_personal_theme()
 
 
 

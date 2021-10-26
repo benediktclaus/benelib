@@ -6,7 +6,7 @@
 #' @param accent String, the accent color to choose (defaults to `red`). There
 #'   are several options available: `red`, `green`, `black`, `yellow`,
 #'   `grey`
-#' @inheritParams set_pedscience_theme
+#' @inheritParams use_pedscience_theme
 #'
 #' @export
 #' @examples
@@ -20,10 +20,13 @@
 #' test_plot
 #'
 #' # Setting the theme
-#' set_dksz_theme()
+#' use_dksz_theme()
 #'
 #' test_plot
-set_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+#'
+#' # Remove theme
+#' use_base_theme()
+use_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   dksz_colors <- c(
     "red"        = "#d70014",
     "orange"     = "#eb6e00",

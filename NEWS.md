@@ -1,6 +1,12 @@
+# benelib 0.8.0
+## Breaking changes
+
+* The corporate theming functions now use the `usethis`-style prefix `use_*` instead of `set_*`.
+* Now, those plots with custom corporate theming can be saved with `save_custom_plot`, which renders fonts (i.e., the font size) correctly.
+
 # benelib 0.7.1
 
-* Patch to include an analysis paragraph in the analysis template.
+* Patch to include an analysis paragraph in the analysis document template.
 
 # benelib 0.7.0
 
