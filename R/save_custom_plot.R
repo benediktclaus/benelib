@@ -11,6 +11,7 @@
 #' save it as a raster image (JPG, PNG, etc.), use this function to save the
 #' plot to a desired location.
 #'
+#'
 #' @param plot A ggplot2 plot.
 #' @param filename The plot's desired file name.
 #' @param path The desired path to which the plot should be saved.
