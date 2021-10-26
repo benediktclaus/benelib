@@ -1,11 +1,12 @@
 #' Save A Plot With Custom Theming
 #'
-#' The various `use_*` functions from the benelib are powered by the thematic
-#' package. This powerful package makes it possible to use custom Google fonts
-#' without worrying about plotting those. However, this comes with a small
-#' drawback for saving plots. If one uses ggplot2's `ggsave` function, text may
-#' be rendered too small in raster images. `thematic` provides a custom
-#' function, for which this function is a simple wrapper.
+#' The various `use_*` functions from the `benelib` are powered by the
+#' [`thematic`] package. This powerful package makes it possible to use custom
+#' Google fonts without worrying about plotting those. However, this comes with
+#' a small drawback for saving plots. If one uses ggplot2's
+#' [`ggsave`][ggplot2::ggsave()] function, text may be rendered too small in
+#' raster images. [`thematic`] provides a custom function, for which this
+#' function is a simple wrapper.
 #'
 #' In short: if you use a plot theming function from this package and want to
 #' save it as a raster image (JPG, PNG, etc.), use this function to save the

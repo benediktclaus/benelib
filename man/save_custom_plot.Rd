@@ -33,12 +33,13 @@ save_custom_plot(
 Nothing, saves plot to disk.
 }
 \description{
-The various \verb{use_*} functions from the benelib are powered by the thematic
-package. This powerful package makes it possible to use custom Google fonts
-without worrying about plotting those. However, this comes with a small
-drawback for saving plots. If one uses ggplot2's \code{ggsave} function, text may
-be rendered too small in raster images. \code{thematic} provides a custom
-function, for which this function is a simple wrapper.
+The various \verb{use_*} functions from the \code{benelib} are powered by the
+\code{\link{thematic}} package. This powerful package makes it possible to use custom
+Google fonts without worrying about plotting those. However, this comes with
+a small drawback for saving plots. If one uses ggplot2's
+\code{\link[ggplot2:ggsave]{ggsave}} function, text may be rendered too small in
+raster images. \code{\link{thematic}} provides a custom function, for which this
+function is a simple wrapper.
 }
 \details{
 In short: if you use a plot theming function from this package and want to
