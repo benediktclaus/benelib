@@ -31,7 +31,7 @@
 #' set_pedscience_theme()
 #'
 #' test_plot
-set_pedscience_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+use_pedscience_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   pedscience_colors <- c(
     "blue"       = "#2356a3",
     "coral"      = "#e04313",
@@ -71,6 +71,6 @@ thematic_on(
 #' @importFrom thematic thematic_off
 #'
 #' @export
-remove_theme <- function() {
+use_base_theme <- function() {
   thematic_off()
 }

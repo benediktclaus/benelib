@@ -6,7 +6,7 @@
 #' @param accent String, the accent color to choose (defaults to `blue`). There
 #'   are several options available: `dark_green`, `green`, `yellow`, `orange`,
 #'   `grey`
-#' @inheritParams set_pedscience_theme
+#' @inheritParams use_pedscience_theme
 #'
 #' @export
 #' @examples
@@ -23,7 +23,7 @@
 #' set_personal_theme()
 #'
 #' test_plot
-set_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+use_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   personal_colors <- c(
     "blue"       = "#004358",
     "dark_green" = "#1F8A70",

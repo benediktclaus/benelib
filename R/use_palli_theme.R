@@ -6,7 +6,7 @@
 #' @param accent String, the accent color to choose (defaults to `green`). There
 #'   are several options available: `green`, `orange`, `yellow`, `blue`,
 #'   `grey`
-#' @inheritParams set_pedscience_theme
+#' @inheritParams use_pedscience_theme
 #'
 #' @export
 #' @examples
@@ -23,7 +23,7 @@
 #' set_palli_theme()
 #'
 #' test_plot
-set_palli_theme <- function(accent = "green", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+use_palli_theme <- function(accent = "green", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   palli_colors <- c(
     "green"   = "#94c11f",
     "orange"  = "#ed8a0d",
