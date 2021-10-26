@@ -23,7 +23,7 @@
 #' set_personal_theme()
 #'
 #' test_plot
-set_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+use_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   personal_colors <- c(
     "blue"       = "#004358",
     "dark_green" = "#1F8A70",

@@ -23,7 +23,7 @@
 #' set_dksz_theme()
 #'
 #' test_plot
-set_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+use_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
   dksz_colors <- c(
     "red"        = "#d70014",
     "orange"     = "#eb6e00",
