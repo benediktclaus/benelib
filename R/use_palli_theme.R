@@ -6,7 +6,7 @@
 #' @param accent String, the accent color to choose (defaults to `green`). There
 #'   are several options available: `green`, `orange`, `yellow`, `blue`,
 #'   `grey`
-#' @inheritParams set_pedscience_theme
+#' @inheritParams use_pedscience_theme
 #'
 #' @export
 #' @examples
