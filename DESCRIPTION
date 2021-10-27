@@ -21,7 +21,8 @@ Imports:
     fs,
     stringr,
     showtext,
-    thematic
+    thematic,
+    grDevices
 Suggests: 
     dplyr,
     rmarkdown,
