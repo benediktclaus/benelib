@@ -35,6 +35,8 @@
 #' # Remove theme
 #' use_base_theme()
 use_pedscience_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+  initialize_device()
+
   pedscience_colors <- c(
     "blue"       = "#2356a3",
     "coral"      = "#e04313",
@@ -76,4 +78,18 @@ thematic_on(
 #' @export
 use_base_theme <- function() {
   thematic_off()
+}
+
+
+#' Initialize Graphics Device
+#'
+#' When use a custom themin function with thematic, the package showtext will
+#' throw an error if no plot was rendered yet. This is because showtext checks,
+#' if a graphics device is active. If not (default), the error is thrown. This
+#' function checks whether a graphics devide is active and sets the next one if
+#' that is not the case.
+#'
+#' @noRd
+initialize_device <- function() {
+  if (grDevices::dev.cur() == 1) grDevices::dev.set()
 }

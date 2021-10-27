@@ -27,6 +27,8 @@
 #' # Remove theme
 #' use_base_theme()
 use_personal_theme <- function(accent = "blue", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+  initialize_device()
+
   personal_colors <- c(
     "blue"       = "#004358",
     "dark_green" = "#1F8A70",
