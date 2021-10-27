@@ -27,6 +27,8 @@
 #' # Remove theme
 #' use_base_theme()
 use_dksz_theme <- function(accent = "red", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+  initialize_device()
+
   dksz_colors <- c(
     "red"        = "#d70014",
     "orange"     = "#eb6e00",

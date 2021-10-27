@@ -27,6 +27,8 @@
 #' # Remove theme
 #' use_base_theme()
 use_palli_theme <- function(accent = "green", palette = "main", font = "Roboto", font_scale = 1, reverse = FALSE) {
+  initialize_device()
+
   palli_colors <- c(
     "green"   = "#94c11f",
     "orange"  = "#ed8a0d",
