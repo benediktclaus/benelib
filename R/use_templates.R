@@ -29,10 +29,23 @@ use_analysis_template <- function(folder = NA) {
 }
 
 
-use_data_cleaning_template <- function(folder = NA) {
+#' Use Data Cleaning Template
+#'
+#' Execute this function to use a data cleaning template containing the relevant
+#' packages to clean a file of the chosen type.
+#'
+#' @inheritParams use_analysis_template
+#' @param file_format Which file format do you want to clean? You can choose
+#'   between "csv" (default), "excel", and "spss"
+#'
+#' @export
+use_data_cleaning_template <- function(folder = NA, file_format = "csv") {
   # Check correct folder name format
   if (!is.character(folder)) stop("The folder name must be a string.")
-  template_path <- path(path_package("benelib"), "templates", "analyses.R")
+  if (!is.character(file_format)) stop("The file format for which you want to create a data cleaning template must be a string.")
+  if (!(file_format %in% c("csv", "excel", "spss"))) stop("Data cleaning templates are only available for \"csv\", \"excel\", and \"spss\".")
+
+  template_path <- path(path_package("benelib"), "templates", str_c("data-cleaning-", file_format, ".R"))
 
 
   # If folder is defined, use it
