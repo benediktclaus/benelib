@@ -30,10 +30,10 @@ personal_project <- function(path, ...) {
 
 
   # Create Cleaning and Analyses Files if checked
-  if (arguments[["cleaning-csv"]])   use_data_cleaning_template(file_format = "csv")
-  if (arguments[["cleaning-spss"]])  use_data_cleaning_template(file_format = "spss")
-  if (arguments[["cleaning-excel"]]) use_data_cleaning_template(file_format = "excel")
-  if (arguments[["analyses"]])       use_analysis_template()
+  if (arguments[["cleaning-csv"]])   use_data_cleaning_template(path(path, "03 R"), file_format = "csv")
+  if (arguments[["cleaning-spss"]])  use_data_cleaning_template(path(path, "03 R"), file_format = "spss")
+  if (arguments[["cleaning-excel"]]) use_data_cleaning_template(path(path, "03 R"), file_format = "excel")
+  if (arguments[["analyses"]])       use_analysis_template(path(path, "03 R"))
 }
 
 
