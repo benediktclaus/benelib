@@ -11,7 +11,7 @@
 #' @export
 use_analysis_template <- function(destination_path) {
   destination_path <- path(path_wd(), "03 R")
-  template_path <- path(path_package("benelib"), "templates", "analysis.R")
+  template_path <- path(path_package("benelib"), "templates", "analyses.R")
 
   file_copy(template_path, destination_path)
 }
