@@ -12,7 +12,7 @@
 #' @export
 use_analysis_template <- function(folder = NA) {
   # Check correct folder name format
-  if (!is.character(folder)) stop("The folder name must be a string.")
+  if (!is.na(folder) & !is.character(folder)) stop("The folder name must be a string.")
   template_path <- path(path_package("benelib"), "templates", "analyses.R")
 
 
@@ -43,7 +43,7 @@ use_analysis_template <- function(folder = NA) {
 #' @export
 use_data_cleaning_template <- function(folder = NA, file_format = "csv") {
   # Check correct folder name format
-  if (!is.character(folder)) stop("The folder name must be a string.")
+  if (!is.na(folder) & !is.character(folder)) stop("The folder name must be a string.")
   if (!is.character(file_format)) stop("The file format for which you want to create a data cleaning template must be a string.")
   if (!(file_format %in% c("csv", "excel", "spss"))) stop("Data cleaning templates are only available for \"csv\", \"excel\", and \"spss\".")
 
