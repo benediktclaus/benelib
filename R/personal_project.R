@@ -5,6 +5,9 @@
 #' @param path Path, where project should be created
 #' @param ... Optional arguments
 #'
+#' @importFrom fs path
+#' @importFrom purrr walk
+#'
 #' @noRd
 personal_project <- function(path, ...) {
   arguments <- list(...)
@@ -21,21 +24,32 @@ personal_project <- function(path, ...) {
 
 
   # Include additional folders if checked in the menu
-  if (arguments[["report"]])     use_custom_folder(path, "Report")
   if (arguments[["literature"]]) use_custom_folder(path, "Literature")
   if (arguments[["article"]])    use_custom_folder(path, "Article")
   if (arguments[["misc"]])       use_custom_folder(path, "Miscellaneous")
 
 
   # Create Cleaning and Analyses Files if checked
-  if (arguments[["cleaning-csv"]])   file_copy(path = path(template_path, "data-cleaning-csv.R"),   new_path = path(path, "03 R", "data-cleaning-csv.R"))
-  if (arguments[["cleaning-spss"]])  file_copy(path = path(template_path, "data-cleaning-spss.R"),  new_path = path(path, "03 R", "data-cleaning.R"))
-  if (arguments[["cleaning-excel"]]) file_copy(path = path(template_path, "data-cleaning-excel.R"), new_path = path(path, "03 R", "data-cleaning.R"))
-  if (arguments[["analyses"]])       file_copy(path = path(template_path, "analyses.R"),            new_path = path(path, "03 R", "analyses.R"))
+  if (arguments[["cleaning-csv"]])   use_data_cleaning_template(file_format = "csv")
+  if (arguments[["cleaning-spss"]])  use_data_cleaning_template(file_format = "spss")
+  if (arguments[["cleaning-excel"]]) use_data_cleaning_template(file_format = "excel")
+  if (arguments[["analyses"]])       use_analysis_template()
 }
 
 
-# Create folder name based on number of current folders
+#' Create Folder Name
+#'
+#' Create folder name based on number of folders in the current working
+#' directory. If n folders exist, a folder with number n + 1 will be created
+#' (with leading 0 for numbers < 10 for nice layout)
+#'
+#' @param path Where should the folder be created?
+#' @param name What should the folder be called? This must be a string.
+#'
+#' @importFrom fs dir_info
+#' @importFrom stringr str_pad str_c
+#'
+#' @noRd
 create_folder_name <- function(path, name) {
   folder_number <- nrow(dir_info(path, type = "directory")) + 1
   folder_number_formatted <- str_pad(folder_number, 2, pad = 0)
@@ -44,19 +58,46 @@ create_folder_name <- function(path, name) {
 }
 
 
-# Check if folder name already exists
+
+#' Check Existing Folders
+#'
+#' Check if folder name already exists in current working directory. Returns
+#' `TRUE` of so.
+#'
+#' @inheritParams create_folder_name
+#'
+#' @importFrom fs dir_ls
+#' @importFrom stringr str_detect
+#'
+#' @noRd
 is_already_here <- function(path, name) {
-  detected_strings <- dir_ls(path, type = "directory") %>%
-    str_detect(., str_c("^.*\\d{1,2} ", name, "$"))
+  detected_strings <-  str_detect(dir_ls(path, type = "directory"), str_c("^.*\\d{1,2} ", name, "$"))
 
   TRUE %in% detected_strings
 }
 
 
-# Create a new folder with formatted number and given name
+
+#' Create A Custom Folder
+#'
+#' Create a new folder with formatted number and custom name in the current
+#' working directory. The newly created folder will be labelled with the number
+#' n + 1 with n being the number of folders already existent in the working
+#' directory. If a folder with the same name (must not be the same number)
+#' already exists, you can choose to add another one with the same name (and
+#' different number).
+#'
+#' @param path Where should the folder be created?
+#' @param folder_name What should the folder be called? This must be a string.
+#' @param add Should the folder be added even if the name already exists?
+#'   Defaults to `FALSE`.
+#'
+#' @importFrom fs dir_create
+#'
+#' @export
 use_custom_folder <- function(path, folder_name, add = FALSE) {
   # Check if arguments have correct format
-  if (!is.character(path)) stop("The directory path must be a string.")
+  if (!is.character(path)) stop("The folder path must be a string.")
   if (!is.character(folder_name)) stop("The folder name must be a string.")
 
   # Check if folder already exists
