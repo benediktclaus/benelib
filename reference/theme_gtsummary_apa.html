@@ -85,7 +85,7 @@ correcting p-values is the false discovery rate correction." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">benelib</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.0</span>
       </span>
     </div>
 
@@ -157,418 +157,420 @@ be loaded.</p></td>
     <div class='dont-index'><p><code><a href='theme_gt_apa.html'>theme_gt_apa()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/ddsjoberg/gtsummary'>gtsummary</a></span><span class='op'>)</span>
-<span class='fu'>theme_gtsummary_apa</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='message'>Setting theme `APA`</span></div><div class='input'>
-<span class='va'>trial</span> <span class='op'>%&gt;%</span>
- <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>age</span>, <span class='va'>response</span>, <span class='va'>ttdeath</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
- <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/tbl_summary.html'>tbl_summary</a></span><span class='op'>(</span>by <span class='op'>=</span> <span class='va'>trt</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
- <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/add_n.html'>add_n</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
- <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/add_p.html'>add_p</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
- <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/add_q.html'>add_q</a></span><span class='op'>(</span>quiet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; &lt;div id="exombwkkeu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"&gt;
-#&gt;   &lt;style&gt;html {
-#&gt;   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_table {
-#&gt;   display: table;
-#&gt;   border-collapse: collapse;
-#&gt;   margin-left: auto;
-#&gt;   margin-right: auto;
-#&gt;   color: #333333;
-#&gt;   font-size: 16px;
-#&gt;   font-weight: normal;
-#&gt;   font-style: normal;
-#&gt;   background-color: #FFFFFF;
-#&gt;   width: auto;
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 2px;
-#&gt;   border-top-color: #A8A8A8;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 2px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #A8A8A8;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 2px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_heading {
-#&gt;   background-color: #FFFFFF;
-#&gt;   text-align: center;
-#&gt;   border-bottom-color: #FFFFFF;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 1px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 1px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_title {
-#&gt;   color: #333333;
-#&gt;   font-size: 125%;
-#&gt;   font-weight: initial;
-#&gt;   padding-top: 4px;
-#&gt;   padding-bottom: 4px;
-#&gt;   border-bottom-color: #FFFFFF;
-#&gt;   border-bottom-width: 0;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_subtitle {
-#&gt;   color: #333333;
-#&gt;   font-size: 85%;
-#&gt;   font-weight: initial;
-#&gt;   padding-top: 0;
-#&gt;   padding-bottom: 6px;
-#&gt;   border-top-color: #FFFFFF;
-#&gt;   border-top-width: 0;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_bottom_border {
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_col_headings {
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 2px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 1px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 1px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_col_heading {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   font-size: 100%;
-#&gt;   font-weight: normal;
-#&gt;   text-transform: inherit;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 1px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 1px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt;   vertical-align: bottom;
-#&gt;   padding-top: 5px;
-#&gt;   padding-bottom: 6px;
-#&gt;   padding-left: 5px;
-#&gt;   padding-right: 5px;
-#&gt;   overflow-x: hidden;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_column_spanner_outer {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   font-size: 100%;
-#&gt;   font-weight: normal;
-#&gt;   text-transform: inherit;
-#&gt;   padding-top: 0;
-#&gt;   padding-bottom: 0;
-#&gt;   padding-left: 4px;
-#&gt;   padding-right: 4px;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_column_spanner_outer:first-child {
-#&gt;   padding-left: 0;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_column_spanner_outer:last-child {
-#&gt;   padding-right: 0;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_column_spanner {
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt;   vertical-align: bottom;
-#&gt;   padding-top: 5px;
-#&gt;   padding-bottom: 5px;
-#&gt;   overflow-x: hidden;
-#&gt;   display: inline-block;
-#&gt;   width: 100%;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_group_heading {
-#&gt;   padding: 8px;
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   font-size: 100%;
-#&gt;   font-weight: initial;
-#&gt;   text-transform: inherit;
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 2px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 1px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 1px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt;   vertical-align: middle;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_empty_group_heading {
-#&gt;   padding: 0.5px;
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   font-size: 100%;
-#&gt;   font-weight: initial;
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 2px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt;   vertical-align: middle;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_from_md &gt; :first-child {
-#&gt;   margin-top: 0;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_from_md &gt; :last-child {
-#&gt;   margin-bottom: 0;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_row {
-#&gt;   padding-top: 8px;
-#&gt;   padding-bottom: 8px;
-#&gt;   padding-left: 5px;
-#&gt;   padding-right: 5px;
-#&gt;   margin: 10px;
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 1px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 1px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 1px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt;   vertical-align: middle;
-#&gt;   overflow-x: hidden;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_stub {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   font-size: 100%;
-#&gt;   font-weight: initial;
-#&gt;   text-transform: inherit;
-#&gt;   border-right-style: solid;
-#&gt;   border-right-width: 2px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt;   padding-left: 12px;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_summary_row {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   text-transform: inherit;
-#&gt;   padding-top: 8px;
-#&gt;   padding-bottom: 8px;
-#&gt;   padding-left: 5px;
-#&gt;   padding-right: 5px;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_first_summary_row {
-#&gt;   padding-top: 8px;
-#&gt;   padding-bottom: 8px;
-#&gt;   padding-left: 5px;
-#&gt;   padding-right: 5px;
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 2px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_grand_summary_row {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   text-transform: inherit;
-#&gt;   padding-top: 8px;
-#&gt;   padding-bottom: 8px;
-#&gt;   padding-left: 5px;
-#&gt;   padding-right: 5px;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_first_grand_summary_row {
-#&gt;   padding-top: 8px;
-#&gt;   padding-bottom: 8px;
-#&gt;   padding-left: 5px;
-#&gt;   padding-right: 5px;
-#&gt;   border-top-style: double;
-#&gt;   border-top-width: 6px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_striped {
-#&gt;   background-color: rgba(128, 128, 128, 0.05);
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_table_body {
-#&gt;   border-top-style: solid;
-#&gt;   border-top-width: 2px;
-#&gt;   border-top-color: #D3D3D3;
-#&gt;   border-bottom-style: solid;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_footnotes {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   border-bottom-style: none;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 2px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 2px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_footnote {
-#&gt;   margin: 0px;
-#&gt;   font-size: 90%;
-#&gt;   padding: 4px;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_sourcenotes {
-#&gt;   color: #333333;
-#&gt;   background-color: #FFFFFF;
-#&gt;   border-bottom-style: none;
-#&gt;   border-bottom-width: 2px;
-#&gt;   border-bottom-color: #D3D3D3;
-#&gt;   border-left-style: none;
-#&gt;   border-left-width: 2px;
-#&gt;   border-left-color: #D3D3D3;
-#&gt;   border-right-style: none;
-#&gt;   border-right-width: 2px;
-#&gt;   border-right-color: #D3D3D3;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_sourcenote {
-#&gt;   font-size: 90%;
-#&gt;   padding: 4px;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_left {
-#&gt;   text-align: left;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_center {
-#&gt;   text-align: center;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_right {
-#&gt;   text-align: right;
-#&gt;   font-variant-numeric: tabular-nums;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_font_normal {
-#&gt;   font-weight: normal;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_font_bold {
-#&gt;   font-weight: bold;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_font_italic {
-#&gt;   font-style: italic;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_super {
-#&gt;   font-size: 65%;
-#&gt; }
-#&gt; 
-#&gt; #exombwkkeu .gt_footnote_marks {
-#&gt;   font-style: italic;
-#&gt;   font-weight: normal;
-#&gt;   font-size: 65%;
-#&gt; }
-#&gt; &lt;/style&gt;
-#&gt;   &lt;table class="gt_table"&gt;
-#&gt;   
-#&gt;   &lt;thead class="gt_col_headings"&gt;
-#&gt;     &lt;tr&gt;
-#&gt;       &lt;th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"&gt;&lt;strong&gt;Characteristic&lt;/strong&gt;&lt;/th&gt;
-#&gt;       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;N&lt;/strong&gt;&lt;/th&gt;
-#&gt;       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;Drug A&lt;/strong&gt;, N = 98&lt;sup class="gt_footnote_marks"&gt;1&lt;/sup&gt;&lt;/th&gt;
-#&gt;       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;Drug B&lt;/strong&gt;, N = 102&lt;sup class="gt_footnote_marks"&gt;1&lt;/sup&gt;&lt;/th&gt;
-#&gt;       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;p-value&lt;/strong&gt;&lt;sup class="gt_footnote_marks"&gt;2&lt;/sup&gt;&lt;/th&gt;
-#&gt;       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;q-value&lt;/strong&gt;&lt;sup class="gt_footnote_marks"&gt;3&lt;/sup&gt;&lt;/th&gt;
-#&gt;     &lt;/tr&gt;
-#&gt;   &lt;/thead&gt;
-#&gt;   &lt;tbody class="gt_table_body"&gt;
-#&gt;     &lt;tr&gt;&lt;td class="gt_row gt_left"&gt;Age&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;189&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;47.01 (14.71)&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;47.45 (14.01)&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;0.8&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;0.8&lt;/td&gt;&lt;/tr&gt;
-#&gt;     &lt;tr&gt;&lt;td class="gt_row gt_left"&gt;Tumor Response&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;193&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;28 (29%)&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;33 (34%)&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;0.5&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;0.8&lt;/td&gt;&lt;/tr&gt;
-#&gt;     &lt;tr&gt;&lt;td class="gt_row gt_left"&gt;Months to Death/Censor&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;200&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;20.23 (4.99)&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;19.04 (5.50)&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;0.11&lt;/td&gt;
-#&gt; &lt;td class="gt_row gt_center"&gt;0.3&lt;/td&gt;&lt;/tr&gt;
-#&gt;   &lt;/tbody&gt;
-#&gt;   
-#&gt;   &lt;tfoot&gt;
-#&gt;     &lt;tr class="gt_footnotes"&gt;
-#&gt;       &lt;td colspan="6"&gt;
-#&gt;         &lt;p class="gt_footnote"&gt;
-#&gt;           &lt;sup class="gt_footnote_marks"&gt;
-#&gt;             &lt;em&gt;1&lt;/em&gt;
-#&gt;           &lt;/sup&gt;
-#&gt;            
-#&gt;           Mean (SD); n (%)
-#&gt;           &lt;br /&gt;
-#&gt;         &lt;/p&gt;
-#&gt;         &lt;p class="gt_footnote"&gt;
-#&gt;           &lt;sup class="gt_footnote_marks"&gt;
-#&gt;             &lt;em&gt;2&lt;/em&gt;
-#&gt;           &lt;/sup&gt;
-#&gt;            
-#&gt;           Welch Two Sample t-test; Pearson's Chi-squared test
-#&gt;           &lt;br /&gt;
-#&gt;         &lt;/p&gt;
-#&gt;         &lt;p class="gt_footnote"&gt;
-#&gt;           &lt;sup class="gt_footnote_marks"&gt;
-#&gt;             &lt;em&gt;3&lt;/em&gt;
-#&gt;           &lt;/sup&gt;
-#&gt;            
-#&gt;           False discovery rate correction for multiple testing
-#&gt;           &lt;br /&gt;
-#&gt;         &lt;/p&gt;
-#&gt;       &lt;/td&gt;
-#&gt;     &lt;/tr&gt;
-#&gt;   &lt;/tfoot&gt;
-#&gt; &lt;/table&gt;
-#&gt; &lt;/div&gt;</div></pre>
+    <pre class="examples"><span class='r-in'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/ddsjoberg/gtsummary'>gtsummary</a></span><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'>theme_gtsummary_apa</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> Setting theme `APA`</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='va'>trial</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>age</span>, <span class='va'>response</span>, <span class='va'>ttdeath</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'> <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/tbl_summary.html'>tbl_summary</a></span><span class='op'>(</span>by <span class='op'>=</span> <span class='va'>trt</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'> <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/add_n.html'>add_n</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'> <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/add_p.html'>add_p</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'><a href='%>%.html'>%&gt;%</a></span></span>
+<span class='r-in'> <span class='fu'><a href='http://www.danieldsjoberg.com/gtsummary//reference/add_q.html'>add_q</a></span><span class='op'>(</span>quiet <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;div id="exombwkkeu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;style&gt;html {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_table {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   display: table;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-collapse: collapse;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   margin-left: auto;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   margin-right: auto;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 16px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: normal;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-style: normal;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   width: auto;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #A8A8A8;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #A8A8A8;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_heading {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-align: center;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_title {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 125%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: initial;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 4px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 4px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_subtitle {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 85%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: initial;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 6px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_bottom_border {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_col_headings {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_col_heading {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 100%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: normal;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-transform: inherit;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   vertical-align: bottom;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 6px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   overflow-x: hidden;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_column_spanner_outer {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 100%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: normal;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-transform: inherit;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 4px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 4px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_column_spanner_outer:first-child {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_column_spanner_outer:last-child {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_column_spanner {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   vertical-align: bottom;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   overflow-x: hidden;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   display: inline-block;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   width: 100%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_group_heading {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 100%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: initial;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-transform: inherit;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   vertical-align: middle;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_empty_group_heading {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding: 0.5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 100%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: initial;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   vertical-align: middle;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_from_md &gt; :first-child {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   margin-top: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_from_md &gt; :last-child {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   margin-bottom: 0;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_row {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   margin: 10px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 1px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   vertical-align: middle;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   overflow-x: hidden;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_stub {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 100%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: initial;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-transform: inherit;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 12px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_summary_row {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-transform: inherit;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_first_summary_row {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_grand_summary_row {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-transform: inherit;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_first_grand_summary_row {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-top: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-bottom: 8px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-left: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding-right: 5px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: double;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 6px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_striped {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: rgba(128, 128, 128, 0.05);</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_table_body {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-top-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: solid;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_footnotes {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_footnote {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   margin: 0px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 90%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding: 4px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_sourcenotes {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   color: #333333;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   background-color: #FFFFFF;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-bottom-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-left-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-style: none;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-width: 2px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   border-right-color: #D3D3D3;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_sourcenote {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 90%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   padding: 4px;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_left {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-align: left;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_center {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-align: center;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_right {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   text-align: right;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-variant-numeric: tabular-nums;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_font_normal {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: normal;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_font_bold {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: bold;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_font_italic {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-style: italic;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_super {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 65%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> #exombwkkeu .gt_footnote_marks {</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-style: italic;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-weight: normal;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   font-size: 65%;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> }</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;/style&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;table class="gt_table"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;thead class="gt_col_headings"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;tr&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"&gt;&lt;strong&gt;Characteristic&lt;/strong&gt;&lt;/th&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;N&lt;/strong&gt;&lt;/th&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;Drug A&lt;/strong&gt;, N = 98&lt;sup class="gt_footnote_marks"&gt;1&lt;/sup&gt;&lt;/th&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;Drug B&lt;/strong&gt;, N = 102&lt;sup class="gt_footnote_marks"&gt;1&lt;/sup&gt;&lt;/th&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;p-value&lt;/strong&gt;&lt;sup class="gt_footnote_marks"&gt;2&lt;/sup&gt;&lt;/th&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1"&gt;&lt;strong&gt;q-value&lt;/strong&gt;&lt;sup class="gt_footnote_marks"&gt;3&lt;/sup&gt;&lt;/th&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;/tr&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;/thead&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;tbody class="gt_table_body"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;tr&gt;&lt;td class="gt_row gt_left"&gt;Age&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;189&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;47.01 (14.71)&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;47.45 (14.01)&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;0.8&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;0.8&lt;/td&gt;&lt;/tr&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;tr&gt;&lt;td class="gt_row gt_left"&gt;Tumor Response&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;193&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;28 (29%)&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;33 (34%)&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;0.5&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;0.8&lt;/td&gt;&lt;/tr&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;tr&gt;&lt;td class="gt_row gt_left"&gt;Months to Death/Censor&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;200&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;20.23 (4.99)&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;19.04 (5.50)&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;0.11&lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;td class="gt_row gt_center"&gt;0.3&lt;/td&gt;&lt;/tr&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;/tbody&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;tfoot&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;tr class="gt_footnotes"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;td colspan="6"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         &lt;p class="gt_footnote"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;sup class="gt_footnote_marks"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             &lt;em&gt;1&lt;/em&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;/sup&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           Mean (SD); n (%)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;br /&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         &lt;/p&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         &lt;p class="gt_footnote"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;sup class="gt_footnote_marks"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             &lt;em&gt;2&lt;/em&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;/sup&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           Welch Two Sample t-test; Pearson's Chi-squared test</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;br /&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         &lt;/p&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         &lt;p class="gt_footnote"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;sup class="gt_footnote_marks"&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>             &lt;em&gt;3&lt;/em&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;/sup&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>            </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           False discovery rate correction for multiple testing</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>           &lt;br /&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>         &lt;/p&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>       &lt;/td&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>     &lt;/tr&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   &lt;/tfoot&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;/table&gt;</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> &lt;/div&gt;</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

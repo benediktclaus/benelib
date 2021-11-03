@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">benelib</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.8.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.9.0</span>
       </span>
     </div>
 
@@ -123,6 +123,28 @@
       <small>Source: <a href='https://github.com/benediktclaus/benelib/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="benelib-090" class="section level1">
+<h1 class="page-header" data-toc-text="0.9.0">
+<a href="#benelib-090" class="anchor"></a>benelib 0.9.0</h1>
+<ul>
+<li>The benelib now uses a completely new personal project setup function, employing mainly the new <code>use_custom_folder</code> and <code>use_.*_template</code> functions. This not only makes the project function much easier to maintain but also gives the end user more flexibility when projects are already created.</li>
+<li>
+<code>use_custom_folder</code> can be used to create a custom folder in the current working directory. It will check if the chosen name is already in use and adds the new folder with the next seriated number.</li>
+<li>
+<code>use_analysis_template</code> can be used to create a skeleton for a potential analyses with my most used packages and setups.</li>
+<li>
+<code>use_data_cleaning_template</code> can be used to include a skeleton for cleaning and wrangling raw data files for CSV, XLSX (Excel) and SAV (SPSS) files</li>
+<li>
+<code>use_latex_template</code> creates a folder containing a LaTeX document with prepopulated preamble and filler text to get going fast.</li>
+</ul>
+</div>
+    <div id="benelib-081" class="section level1">
+<h1 class="page-header" data-toc-text="0.8.1">
+<a href="#benelib-081" class="anchor"></a>benelib 0.8.1</h1>
+<ul>
+<li>Eradicated the graphics device error when a custom corporate plot theme was used and the first plot was produced (originated in the showtext package)</li>
+</ul>
+</div>
     <div id="benelib-080" class="section level1">
 <h1 class="page-header" data-toc-text="0.8.0">
 <a href="#benelib-080" class="anchor"></a>benelib 0.8.0</h1>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Save A Plot With Custom Theming — save_custom_plot • benelib</title>
+<title>Use A Data Cleaning Template — use_data_cleaning_template • benelib</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,14 +46,10 @@
 
 
 
-<meta property="og:title" content="Save A Plot With Custom Theming — save_custom_plot" />
-<meta property="og:description" content="The various use_* functions from the benelib are powered by the
-thematic package. This powerful package makes it possible to use custom
-Google fonts without worrying about plotting those. However, this comes with
-a small drawback for saving plots. If one uses ggplot2's
-ggsave function, text may be rendered too small in
-raster images. thematic provides a custom function, for which this
-function is a simple wrapper." />
+<meta property="og:title" content="Use A Data Cleaning Template — use_data_cleaning_template" />
+<meta property="og:description" content="Execute this function to use a data cleaning template containing the relevant
+packages to clean a file of the chosen type. By default, the template will be
+placed into folder 03 R, but the destination can be changed via folder." />
 <meta property="og:image" content="https://benediktclaus.github.io/benelib/reference/figures/hexsticker.png" />
 <meta property="og:image:alt" content="benelib. A personal R Package." />
 
@@ -126,72 +122,34 @@ function is a simple wrapper." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Save A Plot With Custom Theming</h1>
-    <small class="dont-index">Source: <a href='https://github.com/benediktclaus/benelib/blob/master/R/save_custom_plot.R'><code>R/save_custom_plot.R</code></a></small>
-    <div class="hidden name"><code>save_custom_plot.Rd</code></div>
+    <h1>Use A Data Cleaning Template</h1>
+    <small class="dont-index">Source: <a href='https://github.com/benediktclaus/benelib/blob/master/R/use_templates.R'><code>R/use_templates.R</code></a></small>
+    <div class="hidden name"><code>use_data_cleaning_template.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The various <code>use_*</code> functions from the <code>benelib</code> are powered by the
-<code>thematic</code> package. This powerful package makes it possible to use custom
-Google fonts without worrying about plotting those. However, this comes with
-a small drawback for saving plots. If one uses ggplot2's
-<code><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></code> function, text may be rendered too small in
-raster images. <code>thematic</code> provides a custom function, for which this
-function is a simple wrapper.</p>
+    <p>Execute this function to use a data cleaning template containing the relevant
+packages to clean a file of the chosen type. By default, the template will be
+placed into folder <code>03 R</code>, but the destination can be changed via <code>folder</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>save_custom_plot</span><span class='op'>(</span>
-  <span class='va'>plot</span>,
-  <span class='va'>filename</span>,
-  <span class='va'>path</span>,
-  width <span class='op'>=</span> <span class='fl'>16</span>,
-  height <span class='op'>=</span> <span class='fl'>16</span>,
-  units <span class='op'>=</span> <span class='st'>"cm"</span>,
-  dpi <span class='op'>=</span> <span class='fl'>320</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>use_data_cleaning_template</span><span class='op'>(</span>folder <span class='op'>=</span> <span class='cn'>NA</span>, file_format <span class='op'>=</span> <span class='st'>"csv"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>plot</th>
-      <td><p>A ggplot2 plot.</p></td>
+      <th>folder</th>
+      <td><p>Folder to where the template should be copied.
+Defaults to "03 R". The folder must be in the current working directory.</p></td>
     </tr>
     <tr>
-      <th>filename</th>
-      <td><p>The plot's desired file name.</p></td>
-    </tr>
-    <tr>
-      <th>path</th>
-      <td><p>The desired path to which the plot should be saved.</p></td>
-    </tr>
-    <tr>
-      <th>width</th>
-      <td><p>Plot width, defaults to 16.</p></td>
-    </tr>
-    <tr>
-      <th>height</th>
-      <td><p>Plot height, defaults to 16.</p></td>
-    </tr>
-    <tr>
-      <th>units</th>
-      <td><p>Plot dimension unit, defaults to "cm".</p></td>
-    </tr>
-    <tr>
-      <th>dpi</th>
-      <td><p>Plot resolution, defaults to 320.</p></td>
+      <th>file_format</th>
+      <td><p>Which file format do you want to clean? You can choose
+between "csv" (default), "excel", and "spss"</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Nothing, saves plot to disk.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>In short: if you use a plot theming function from this package and want to
-save it as a raster image (JPG, PNG, etc.), use this function to save the
-plot to a desired location.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
