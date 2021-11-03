@@ -2,7 +2,7 @@
 % Please edit documentation in R/use_templates.R
 \name{use_analysis_template}
 \alias{use_analysis_template}
-\title{Use Analysis Template}
+\title{Use A Analysis Template}
 \usage{
 use_analysis_template(folder = NA)
 }
@@ -13,5 +13,5 @@ Defaults to "03 R". The folder must be in the current working directory.}
 \description{
 Execute this function to use a default raw analysis template. By default, the
 template will be placed into folder \verb{03 R}, but the destination can be
-changed via \code{destination_path}
+changed via \code{folder}.
 }

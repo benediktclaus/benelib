@@ -1,8 +1,8 @@
-#' Use Analysis Template
+#' Use A Analysis Template
 #'
 #' Execute this function to use a default raw analysis template. By default, the
 #' template will be placed into folder `03 R`, but the destination can be
-#' changed via `destination_path`
+#' changed via `folder`.
 #'
 #' @param folder Folder to where the template should be copied.
 #'   Defaults to "03 R". The folder must be in the current working directory.
@@ -29,10 +29,11 @@ use_analysis_template <- function(folder = NA) {
 }
 
 
-#' Use Data Cleaning Template
+#' Use A Data Cleaning Template
 #'
 #' Execute this function to use a data cleaning template containing the relevant
-#' packages to clean a file of the chosen type.
+#' packages to clean a file of the chosen type. By default, the template will be
+#' placed into folder `03 R`, but the destination can be changed via `folder`.
 #'
 #' @inheritParams use_analysis_template
 #' @param file_format Which file format do you want to clean? You can choose
@@ -63,13 +64,23 @@ use_data_cleaning_template <- function(folder = NA, file_format = "csv") {
 }
 
 
-use_latex_template <- function(folder = NA, file_format = "csv") {
+#' Use A LaTeX Document Template
+#'
+#' Execute this function to generate a LaTeX document template with prepopulated
+#' preamble to get your hands on quickly. By default, the template will be
+#' placed into folder `05 Reports`, but the destination can be changed via
+#' `folder`.
+#'
+#' @inheritParams use_analysis_template
+#'
+#' @importFrom fs dir_copy
+#'
+#' @export
+use_latex_template <- function(folder = NA) {
   # Check correct folder name format
   if (!is.na(folder) & !is.character(folder)) stop("The folder name must be a string.")
-  if (!is.character(file_format)) stop("The file format for which you want to create a data cleaning template must be a string.")
-  if (!(file_format %in% c("csv", "excel", "spss"))) stop("Data cleaning templates are only available for \"csv\", \"excel\", and \"spss\".")
 
-  template_path <- path(path_package("benelib"), "templates", str_c("data-cleaning-", file_format, ".R"))
+  template_path <- path(path_package("benelib"), "templates", "latex-document")
 
 
   # If folder is defined, use it
@@ -77,9 +88,9 @@ use_latex_template <- function(folder = NA, file_format = "csv") {
   if (!is.na(folder)) {
     destination_path <- path(path_wd(), folder)
   } else {
-    destination_path <- path(path_wd(), "03 R")
+    destination_path <- path(path_wd(), "05 Reports")
   }
 
 
-  file_copy(template_path, destination_path)
+  dir_copy(template_path, destination_path)
 }

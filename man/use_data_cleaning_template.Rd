@@ -2,7 +2,7 @@
 % Please edit documentation in R/use_templates.R
 \name{use_data_cleaning_template}
 \alias{use_data_cleaning_template}
-\title{Use Data Cleaning Template}
+\title{Use A Data Cleaning Template}
 \usage{
 use_data_cleaning_template(folder = NA, file_format = "csv")
 }
@@ -15,5 +15,6 @@ between "csv" (default), "excel", and "spss"}
 }
 \description{
 Execute this function to use a data cleaning template containing the relevant
-packages to clean a file of the chosen type.
+packages to clean a file of the chosen type. By default, the template will be
+placed into folder \verb{03 R}, but the destination can be changed via \code{folder}.
 }
