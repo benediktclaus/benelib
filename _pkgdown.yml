@@ -16,6 +16,12 @@ template:
     bootswatch: lumen
 
 reference:
+  - title: Templates and Folders
+    desc: >
+      These functions create custom folders and useful templates if a project has already been created.
+  - contents:
+    - use_custom_folder
+    - matches("use_.*_template")
   - title: Color and Fill Scales
     desc: >
       These functions are useful to change ggplot2's default color and fill scales to a corporate design

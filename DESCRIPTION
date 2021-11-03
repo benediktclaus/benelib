@@ -1,7 +1,7 @@
 Package: benelib
 Type: Package
 Title: Helper Functions for My R Workflow
-Version: 0.8.0
+Version: 0.9.0
 Authors@R: person("Benedikt B.", "Claus", email = "b.claus@pedscience.de", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9501-0954"))
 Description: Various helper functions for commonly executed tasks and color schemes for my scientific workflow.
 URL: https://benediktclaus.github.io/benelib
@@ -21,7 +21,8 @@ Imports:
     fs,
     stringr,
     showtext,
-    thematic
+    thematic,
+    grDevices
 Suggests: 
     dplyr,
     rmarkdown,
