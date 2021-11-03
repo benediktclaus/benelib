@@ -27,3 +27,22 @@ use_analysis_template <- function(folder = NA) {
 
   file_copy(template_path, destination_path)
 }
+
+
+use_data_cleaning_template <- function(folder = NA) {
+  # Check correct folder name format
+  if (!is.character(folder)) stop("The folder name must be a string.")
+  template_path <- path(path_package("benelib"), "templates", "analyses.R")
+
+
+  # If folder is defined, use it
+  # If not, use default folder "03 R"
+  if (!is.na(folder)) {
+    destination_path <- path(path_wd(), folder)
+  } else {
+    destination_path <- path(path_wd(), "03 R")
+  }
+
+
+  file_copy(template_path, destination_path)
+}
