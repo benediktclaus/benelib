@@ -38,6 +38,8 @@ use_analysis_template <- function(folder = NA) {
 #' @param file_format Which file format do you want to clean? You can choose
 #'   between "csv" (default), "excel", and "spss"
 #'
+#' @importFrom stringr str_c
+#'
 #' @export
 use_data_cleaning_template <- function(folder = NA, file_format = "csv") {
   # Check correct folder name format
