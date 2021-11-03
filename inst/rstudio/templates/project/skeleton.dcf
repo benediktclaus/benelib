@@ -1,11 +1,15 @@
 Title: Personal Project
-Binding: bene_project
+Binding: personal_project
 Subtitle: Create a new personal project
 Icon: bene-logo.png
 
 Parameter: article
 Widget: CheckboxInput
 Label: Create article folder
+
+Parameter: literature
+Widget: CheckboxInput
+Label: Create literature folder
 
 Parameter: misc
 Widget: CheckboxInput
