@@ -61,3 +61,25 @@ use_data_cleaning_template <- function(folder = NA, file_format = "csv") {
 
   file_copy(template_path, destination_path)
 }
+
+
+use_latex_template <- function(folder = NA, file_format = "csv") {
+  # Check correct folder name format
+  if (!is.na(folder) & !is.character(folder)) stop("The folder name must be a string.")
+  if (!is.character(file_format)) stop("The file format for which you want to create a data cleaning template must be a string.")
+  if (!(file_format %in% c("csv", "excel", "spss"))) stop("Data cleaning templates are only available for \"csv\", \"excel\", and \"spss\".")
+
+  template_path <- path(path_package("benelib"), "templates", str_c("data-cleaning-", file_format, ".R"))
+
+
+  # If folder is defined, use it
+  # If not, use default folder "03 R"
+  if (!is.na(folder)) {
+    destination_path <- path(path_wd(), folder)
+  } else {
+    destination_path <- path(path_wd(), "03 R")
+  }
+
+
+  file_copy(template_path, destination_path)
+}
