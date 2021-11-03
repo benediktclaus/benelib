@@ -8,7 +8,6 @@
 #'
 #' @importFrom fs path path_wd path_package file_copy
 #'
-#' @return
 #' @export
 use_analysis_template <- function(destination_path) {
   destination_path <- path(path_wd(), "03 R")
