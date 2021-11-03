@@ -1,3 +1,5 @@
+# benelib 0.9.0
+
 # benelib 0.8.1
 
 * Eradicated the graphics device error when a custom corporate plot theme was used and the first plot was produced (originated in the showtext package)
