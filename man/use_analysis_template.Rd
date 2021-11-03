@@ -4,10 +4,11 @@
 \alias{use_analysis_template}
 \title{Use Analysis Template}
 \usage{
-use_analysis_template(destination_path)
+use_analysis_template(folder = NA)
 }
 \arguments{
-\item{destination_path}{Folder to where the template should be copied. Defaults to "03 R"}
+\item{folder}{Folder to where the template should be copied.
+Defaults to "03 R". The folder must be in the current working directory.}
 }
 \description{
 Execute this function to use a default raw analysis template. By default, the
