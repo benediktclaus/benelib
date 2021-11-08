@@ -1,3 +1,5 @@
+# benelib 0.9.1
+
 # benelib 0.9.0
 
 * The benelib now uses a completely new personal project setup function, employing mainly the new `use_custom_folder` and `use_.*_template` functions. This not only makes the project function much easier to maintain but also gives the end user more flexibility when projects are already created.
