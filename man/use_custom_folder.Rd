@@ -15,10 +15,11 @@ use_custom_folder(path = NA, folder_name, add = FALSE)
 Defaults to \code{FALSE}.}
 }
 \description{
-Create a new folder with formatted number and custom name in the current
-working directory. The newly created folder will be labelled with the number
-n + 1 with n being the number of folders already existent in the working
-directory. If a folder with the same name (must not be the same number)
-already exists, you can choose to add another one with the same name (and
-different number).
+Create a new folder with formatted number and custom name in the directory
+set with \code{path}. If no path is given, the folder will be created in the
+current working directory. The newly created folder will be labelled with the
+number n + 1 with n being the number of folders already existent in the
+working directory. If a folder with the same name (must not be the same
+number) already exists, you can choose to add another one with the same name
+(and different number).
 }
