@@ -4,7 +4,7 @@
 \alias{use_custom_folder}
 \title{Create A Custom Folder}
 \usage{
-use_custom_folder(path, folder_name, add = FALSE)
+use_custom_folder(path = NA, folder_name, add = FALSE)
 }
 \arguments{
 \item{path}{Where should the folder be created?}

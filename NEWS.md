@@ -1,6 +1,7 @@
 # benelib 0.9.1
 
 * Add `open_working_directory()`, a little helper to open the current working directory
+* `use_custom_folder()` can now be used without a path. If `path = NA`, the folder will be created in the current working directory.
 
 # benelib 0.9.0
 

@@ -92,11 +92,12 @@ is_already_here <- function(path, name) {
 #' @param add Should the folder be added even if the name already exists?
 #'   Defaults to `FALSE`.
 #'
-#' @importFrom fs dir_create
+#' @importFrom fs dir_create path_wd
 #'
 #' @export
-use_custom_folder <- function(path, folder_name, add = FALSE) {
+use_custom_folder <- function(path = NA, folder_name, add = FALSE) {
   # Check if arguments have correct format
+  if (is.na(path)) path <- path_wd()
   if (!is.character(path)) stop("The folder path must be a string.")
   if (!is.character(folder_name)) stop("The folder name must be a string.")
 
