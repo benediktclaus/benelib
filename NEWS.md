@@ -1,3 +1,6 @@
+# benelib 0.10.0
+* Add ggplot2 summary functions for `stat_summary()` (e.g., `mean_sd()`)
+
 # benelib 0.9.1
 
 * Add `open_working_directory()`, a little helper to open the current working directory
