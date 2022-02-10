@@ -1,10 +1,18 @@
+# benelib 0.10.0
+* Add ggplot2 summary functions for `stat_summary()` (e.g., `mean_sd()`)
+
+# benelib 0.9.1
+
+* Add `open_working_directory()`, a little helper to open the current working directory
+* `use_custom_folder()` can now be used without a path. If `path = NA`, the folder will be created in the current working directory.
+
 # benelib 0.9.0
 
-* The benelib now uses a completely new personal project setup function, employing mainly the new `use_custom_folder` and `use_.*_template` functions. This not only makes the project function much easier to maintain but also gives the end user more flexibility when projects are already created.
-* `use_custom_folder` can be used to create a custom folder in the current working directory. It will check if the chosen name is already in use and adds the new folder with the next seriated number.
+* The benelib now uses a completely new personal project setup function, employing mainly the new `use_custom_folder()` and `use_.*_template()` functions. This not only makes the project function much easier to maintain but also gives the end user more flexibility when projects are already created.
+* `use_custom_folder()` can be used to create a custom folder in the current working directory. It will check if the chosen name is already i()n use and adds the new folder with the next seriated number.
 * `use_analysis_template` can be used to create a skeleton for a potential analyses with my most used packages and setups.
-* `use_data_cleaning_template` can be used to include a skeleton for cleaning and wrangling raw data files for CSV, XLSX (Excel) and SAV (SPSS) files
-* `use_latex_template` creates a folder containing a LaTeX document with prepopulated preamble and filler text to get going fast.
+* `use_data_cleaning_template()` can be used to include a skeleton for cleaning and wrangling raw data files for CSV, XLSX (Excel) and SAV (SPSS) files
+* `use_latex_template()` creates a folder containing a LaTeX document with prepopulated preamble and filler text to get going fast.
 
 # benelib 0.8.1
 
@@ -14,7 +22,7 @@
 ## Breaking changes
 
 * The corporate theming functions now use the `usethis`-style prefix `use_*` instead of `set_*`.
-* Now, those plots with custom corporate theming can be saved with `save_custom_plot`, which renders fonts (i.e., the font size) correctly.
+* Now, those plots with custom corporate theming can be saved with `save_custom_plot()`, which renders fonts (i.e., the font size) correctly.
 
 # benelib 0.7.1
 

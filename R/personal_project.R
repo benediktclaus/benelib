@@ -80,23 +80,25 @@ is_already_here <- function(path, name) {
 
 #' Create A Custom Folder
 #'
-#' Create a new folder with formatted number and custom name in the current
-#' working directory. The newly created folder will be labelled with the number
-#' n + 1 with n being the number of folders already existent in the working
-#' directory. If a folder with the same name (must not be the same number)
-#' already exists, you can choose to add another one with the same name (and
-#' different number).
+#' Create a new folder with formatted number and custom name in the directory
+#' set with `path`. If no path is given, the folder will be created in the
+#' current working directory. The newly created folder will be labelled with the
+#' number n + 1 with n being the number of folders already existent in the
+#' working directory. If a folder with the same name (must not be the same
+#' number) already exists, you can choose to add another one with the same name
+#' (and different number).
 #'
 #' @param path Where should the folder be created?
 #' @param folder_name What should the folder be called? This must be a string.
 #' @param add Should the folder be added even if the name already exists?
 #'   Defaults to `FALSE`.
 #'
-#' @importFrom fs dir_create
+#' @importFrom fs dir_create path_wd
 #'
 #' @export
-use_custom_folder <- function(path, folder_name, add = FALSE) {
+use_custom_folder <- function(path = NA, folder_name, add = FALSE) {
   # Check if arguments have correct format
+  if (is.na(path)) path <- path_wd()
   if (!is.character(path)) stop("The folder path must be a string.")
   if (!is.character(folder_name)) stop("The folder name must be a string.")
 
