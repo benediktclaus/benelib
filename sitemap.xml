@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://benediktclaus.github.io/benelib/404.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/authors.html</loc>
+  </url>
+  <url>
     <loc>https://benediktclaus.github.io/benelib/index.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/mean_sd.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/median_se.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/mest_se.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/open_working_directory.html</loc>
   </url>
   <url>
     <loc>https://benediktclaus.github.io/benelib/reference/palmer_penguins.html</loc>
@@ -23,6 +50,9 @@
   </url>
   <url>
     <loc>https://benediktclaus.github.io/benelib/reference/to_tibble.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/tr_mean_se.html</loc>
   </url>
   <url>
     <loc>https://benediktclaus.github.io/benelib/reference/use_analysis_template.html</loc>
@@ -50,5 +80,8 @@
   </url>
   <url>
     <loc>https://benediktclaus.github.io/benelib/reference/use_personal_theme.html</loc>
+  </url>
+  <url>
+    <loc>https://benediktclaus.github.io/benelib/reference/win_mean_se.html</loc>
   </url>
 </urlset>
