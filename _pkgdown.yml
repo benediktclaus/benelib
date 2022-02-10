@@ -8,6 +8,7 @@ authors:
     href: "https://www.benediktclaus.com/"
 
 template:
+  bootstrap: 5
   opengraph:
     image:
       src: man/figures/hexsticker.png
