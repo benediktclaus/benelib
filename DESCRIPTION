@@ -22,7 +22,8 @@ Imports:
     stringr,
     showtext,
     thematic,
-    grDevices
+    grDevices,
+    WRS2
 Suggests: 
     dplyr,
     rmarkdown,
