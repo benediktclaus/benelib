@@ -96,7 +96,7 @@ is_already_here <- function(path, name) {
 #' @importFrom fs dir_create path_wd
 #'
 #' @export
-use_custom_folder <- function(path = NA, folder_name, add = FALSE) {
+use_custom_folder <- function(path = fs::path_wd(), folder_name, add = FALSE) {
   # Check if arguments have correct format
   if (is.na(path)) path <- path_wd()
   if (!is.character(path)) stop("The folder path must be a string.")
