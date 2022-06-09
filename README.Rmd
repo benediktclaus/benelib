@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/benediktclaus/benelib/workflows/R-CMD-check/badge.svg)](https://github.com/benediktclaus/benelib/actions)
+[![R-CMD-check](https://github.com/benediktclaus/benelib/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/benediktclaus/benelib/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## My personal R library
@@ -44,7 +45,7 @@ library(benelib)
 
 ```{r example-color-scale}
 library(ggplot2)
-set_personal_theme()
+use_personal_theme()
 
 palmer_penguins %>% 
   ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
