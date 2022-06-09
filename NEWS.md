@@ -1,3 +1,6 @@
+# benelib 0.11.0
+* Add `report_save()` function
+
 # benelib 0.10.0
 * Add ggplot2 summary functions for `stat_summary()` (e.g., `mean_sd()`)
 
