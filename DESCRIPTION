@@ -1,7 +1,7 @@
 Package: benelib
 Type: Package
 Title: Helper Functions for My R Workflow
-Version: 0.10.0
+Version: 0.11.0
 Authors@R: person("Benedikt B.", "Claus", email = "b.claus@pedscience.de", role = c("cre", "aut"), comment = c(ORCID = "0000-0001-9501-0954"))
 Description: Various helper functions for commonly executed tasks and color schemes for my scientific workflow.
 URL: https://benediktclaus.github.io/benelib
@@ -14,13 +14,11 @@ Imports:
     ggplot2,
     purrr,
     tibble,
-    tidyr,
     magrittr,
     gt,
     gtsummary,
     fs,
     stringr,
-    showtext,
     thematic,
     grDevices,
     WRS2
@@ -29,7 +27,9 @@ Suggests:
     rmarkdown,
     haven,
     janitor,
-    labelled
+    labelled,
+    showtext,
+    ragg
 Depends: 
     R (>= 4.0)
 Roxygen: list(markdown = TRUE)
