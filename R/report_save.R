@@ -6,6 +6,7 @@
 #'
 #' @param filename Desired filename
 #' @param plot Plot
+#' @param path Desired path for saving
 #' @param width Plot width, defaults to 11.75 cm
 #' @param height Plot height, defaults to 9 cm
 #' @param units Unit, defaults to `"cm"`

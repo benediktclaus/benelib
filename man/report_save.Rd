@@ -20,6 +20,8 @@ report_save(
 
 \item{width}{Plot width, defaults to 11.75 cm}
 
+\item{path}{Desired path for saving}
+
 \item{height}{Plot height, defaults to 9 cm}
 
 \item{units}{Unit, defaults to \code{"cm"}}
