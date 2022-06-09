@@ -23,15 +23,16 @@ reference:
   - contents:
     - use_custom_folder
     - matches("use_.*_template")
+    - report_save
     - open_working_directory
-  
+
   - title: Color and Fill Scales
     desc: >
       These functions are useful to change ggplot2's default color and fill scales to a corporate design
   - contents:
     - matches("use_.*_theme")
     - save_custom_plot
-  
+
   - title: ggplot2 Summary functions
     desc: These functions are particularly useful when creating statistical summaries with stat_summary() over individual data points
   - contents:
@@ -39,20 +40,20 @@ reference:
     - median_se
     - mest_se
     - tr_mean_se
-    - win_mean_se 
-  
+    - win_mean_se
+
   - title: ggplot2 Themes
     desc: >
       Custom ggplot2 themes
   - contents:
     - theme_bene
-  
+
   - title: gt Themes
     desc: >
       Themes for the gt package and gtsummary
   - contents:
     - starts_with("theme_gt")
-  
+
   - title: Other
   - contents:
     - palmer_penguins
