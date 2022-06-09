@@ -14,13 +14,11 @@ Imports:
     ggplot2,
     purrr,
     tibble,
-    tidyr,
     magrittr,
     gt,
     gtsummary,
     fs,
     stringr,
-    showtext,
     thematic,
     grDevices,
     WRS2
@@ -29,7 +27,9 @@ Suggests:
     rmarkdown,
     haven,
     janitor,
-    labelled
+    labelled,
+    showtext,
+    ragg
 Depends: 
     R (>= 4.0)
 Roxygen: list(markdown = TRUE)
