@@ -80,10 +80,11 @@ Nothing, called for side effects
 Set a Custom ggplot2 Theme
 }
 \examples{
+library(ggplot2)
 use_custom_theme(palette = "full")
 
 example_plot <- mpg \%>\%
-  ggplot(aes(displ, hwy, color = as_factor(cyl))) +
+  ggplot(aes(displ, hwy, color = as.factor(cyl))) +
   geom_point()
 example_plot
 

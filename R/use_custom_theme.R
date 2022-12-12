@@ -20,10 +20,11 @@
 #' @export
 #'
 #' @examples
+#' library(ggplot2)
 #' use_custom_theme(palette = "full")
 #'
 #' example_plot <- mpg %>%
-#'   ggplot(aes(displ, hwy, color = as_factor(cyl))) +
+#'   ggplot(aes(displ, hwy, color = as.factor(cyl))) +
 #'   geom_point()
 #' example_plot
 #'
@@ -43,10 +44,11 @@
 #' use_base_theme()
 #' example_plot
 use_custom_theme <- function(palette = "main", theme = "personal", accent_color, font = "Roboto", reverse = FALSE) {
+  theming_palettes <- theming_palettes
   initialize_device()
   ggplot2::theme_set(theme_bene())
 
-  chosen_palette <- pluck(theming_palettes, theme, palette)
+  chosen_palette <- purrr::pluck(theming_palettes, theme, palette)
 
   if (missing(accent_color)) accent_color <- purrr::pluck(theming_palettes, theme, "accent") else accent_color <- accent_color
   if (reverse) chosen_palette <- rev(chosen_palette)
@@ -62,6 +64,7 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
 }
 
 #' @rdname use_custom_theme
+#' @export
 use_personal_theme <- function(palette = "full", theme = "personal", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
@@ -73,6 +76,7 @@ use_personal_theme <- function(palette = "full", theme = "personal", accent_colo
 }
 
 #' @rdname use_custom_theme
+#' @export
 use_pedscience_theme <- function(palette = "full", theme = "pedscience", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
@@ -84,6 +88,7 @@ use_pedscience_theme <- function(palette = "full", theme = "pedscience", accent_
 }
 
 #' @rdname use_custom_theme
+#' @export
 use_palli_theme <- function(palette = "full", theme = "palli", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
@@ -95,6 +100,7 @@ use_palli_theme <- function(palette = "full", theme = "palli", accent_color, fon
 }
 
 #' @rdname use_custom_theme
+#' @export
 use_dksz_theme <- function(palette = "full", theme = "dksz", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
