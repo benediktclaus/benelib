@@ -1,4 +1,5 @@
 # benelib (development version)
+* Include option to specify a custom palette as vector of HEX codes
 
 # benelib 1.0.0
 * First stable release

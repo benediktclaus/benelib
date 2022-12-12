@@ -6,6 +6,7 @@
 #'   - `"full"`
 #'   - `"decent"`
 #'   - `"bright"`
+#'   - or a vector of strings with HEX codes
 #' @param theme Which theme to pick the palette from. Can be one of
 #'   - `"personal"`
 #'   - `"pedscience"`
@@ -22,7 +23,7 @@
 #' @examples
 #' library(ggplot2)
 #' use_custom_theme(palette = "full")
-#'
+#'M
 #' example_plot <- mpg %>%
 #'   ggplot(aes(displ, hwy, color = as.factor(cyl))) +
 #'   geom_point()
@@ -48,7 +49,11 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
   initialize_device()
   ggplot2::theme_set(theme_bene())
 
-  chosen_palette <- purrr::pluck(theming_palettes, theme, palette)
+  if (length(palette) > 1) {
+    chosen_palette <- palette
+  } else {
+    chosen_palette <- purrr::pluck(theming_palettes, theme, palette)
+  }
 
   if (missing(accent_color)) accent_color <- purrr::pluck(theming_palettes, theme, "accent") else accent_color <- accent_color
   if (reverse) chosen_palette <- rev(chosen_palette)

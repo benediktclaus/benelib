@@ -56,6 +56,7 @@ use_dksz_theme(
 \item \code{"full"}
 \item \code{"decent"}
 \item \code{"bright"}
+\item or a vector of strings with HEX codes
 }}
 
 \item{theme}{Which theme to pick the palette from. Can be one of
@@ -82,7 +83,7 @@ Set a Custom ggplot2 Theme
 \examples{
 library(ggplot2)
 use_custom_theme(palette = "full")
-
+M
 example_plot <- mpg \%>\%
   ggplot(aes(displ, hwy, color = as.factor(cyl))) +
   geom_point()
