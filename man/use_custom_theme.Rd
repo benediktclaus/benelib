@@ -2,11 +2,47 @@
 % Please edit documentation in R/use_custom_theme.R
 \name{use_custom_theme}
 \alias{use_custom_theme}
+\alias{use_personal_theme}
+\alias{use_pedscience_theme}
+\alias{use_palli_theme}
+\alias{use_dksz_theme}
 \title{Set a Custom ggplot2 Theme}
 \usage{
 use_custom_theme(
   palette = "main",
   theme = "personal",
+  accent_color,
+  font = "Roboto",
+  reverse = FALSE
+)
+
+use_personal_theme(
+  palette = "full",
+  theme = "personal",
+  accent_color,
+  font = "Roboto",
+  reverse = FALSE
+)
+
+use_pedscience_theme(
+  palette = "full",
+  theme = "pedscience",
+  accent_color,
+  font = "Roboto",
+  reverse = FALSE
+)
+
+use_palli_theme(
+  palette = "full",
+  theme = "palli",
+  accent_color,
+  font = "Roboto",
+  reverse = FALSE
+)
+
+use_dksz_theme(
+  palette = "full",
+  theme = "dksz",
   accent_color,
   font = "Roboto",
   reverse = FALSE
@@ -46,10 +82,24 @@ Set a Custom ggplot2 Theme
 \examples{
 use_custom_theme(palette = "full")
 
-mpg \%>\%
+example_plot <- mpg \%>\%
   ggplot(aes(displ, hwy, color = as_factor(cyl))) +
   geom_point()
+example_plot
+
+use_personal_theme()
+example_plot
+
+use_pedscience_theme()
+example_plot
+
+use_palli_theme()
+example_plot
+
+use_dksz_theme()
+example_plot
 
 # Reset the theme with
 use_base_theme()
+example_plot
 }
