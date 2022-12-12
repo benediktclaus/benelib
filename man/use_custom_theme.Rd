@@ -17,7 +17,7 @@ use_custom_theme(
 )
 
 use_personal_theme(
-  palette = "full",
+  palette = "main",
   theme = "personal",
   accent_color,
   font = "Roboto",
@@ -25,7 +25,7 @@ use_personal_theme(
 )
 
 use_pedscience_theme(
-  palette = "full",
+  palette = "main",
   theme = "pedscience",
   accent_color,
   font = "Roboto",
@@ -33,7 +33,7 @@ use_pedscience_theme(
 )
 
 use_palli_theme(
-  palette = "full",
+  palette = "main",
   theme = "palli",
   accent_color,
   font = "Roboto",
@@ -41,7 +41,7 @@ use_palli_theme(
 )
 
 use_dksz_theme(
-  palette = "full",
+  palette = "main",
   theme = "dksz",
   accent_color,
   font = "Roboto",
@@ -52,10 +52,10 @@ use_dksz_theme(
 \item{palette}{A palette in \code{theming_palettes}. Can be one of
 \itemize{
 \item \code{"main"}
-\item \code{"playful"}
-\item \code{"full"}
-\item \code{"decent"}
-\item \code{"bright"}
+\item \code{"sequential"}
+\item \code{"lighter"}
+\item \code{"darker"}
+\item \code{"pastel"}
 \item or a vector of strings with HEX codes
 }}
 

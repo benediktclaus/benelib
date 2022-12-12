@@ -2,10 +2,10 @@
 #'
 #' @param palette A palette in `theming_palettes`. Can be one of
 #'   - `"main"`
-#'   - `"playful"`
-#'   - `"full"`
-#'   - `"decent"`
-#'   - `"bright"`
+#'   - `"sequential"`
+#'   - `"lighter"`
+#'   - `"darker"`
+#'   - `"pastel"`
 #'   - or a vector of strings with HEX codes
 #' @param theme Which theme to pick the palette from. Can be one of
 #'   - `"personal"`
@@ -70,7 +70,7 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
 
 #' @rdname use_custom_theme
 #' @export
-use_personal_theme <- function(palette = "full", theme = "personal", accent_color, font = "Roboto", reverse = FALSE) {
+use_personal_theme <- function(palette = "main", theme = "personal", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -82,7 +82,7 @@ use_personal_theme <- function(palette = "full", theme = "personal", accent_colo
 
 #' @rdname use_custom_theme
 #' @export
-use_pedscience_theme <- function(palette = "full", theme = "pedscience", accent_color, font = "Roboto", reverse = FALSE) {
+use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -94,7 +94,7 @@ use_pedscience_theme <- function(palette = "full", theme = "pedscience", accent_
 
 #' @rdname use_custom_theme
 #' @export
-use_palli_theme <- function(palette = "full", theme = "palli", accent_color, font = "Roboto", reverse = FALSE) {
+use_palli_theme <- function(palette = "main", theme = "palli", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -106,7 +106,7 @@ use_palli_theme <- function(palette = "full", theme = "palli", accent_color, fon
 
 #' @rdname use_custom_theme
 #' @export
-use_dksz_theme <- function(palette = "full", theme = "dksz", accent_color, font = "Roboto", reverse = FALSE) {
+use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
