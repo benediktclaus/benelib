@@ -1,3 +1,7 @@
+# benelib 1.0.0
+* First stable release
+* All theming functions are noe more reliably rewritten
+
 # benelib 0.11.0
 * Add `report_save()` function
 
