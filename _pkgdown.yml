@@ -30,6 +30,7 @@ reference:
     desc: >
       These functions are useful to change ggplot2's default color and fill scales to a corporate design
   - contents:
+    - starts_with("theming")
     - matches("use_.*_theme")
     - save_custom_plot
 
