@@ -23,7 +23,7 @@
 #' @examples
 #' library(ggplot2)
 #' use_custom_theme(palette = "full")
-#'M
+#'
 #' example_plot <- mpg %>%
 #'   ggplot(aes(displ, hwy, color = as.factor(cyl))) +
 #'   geom_point()
