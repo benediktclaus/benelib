@@ -1,3 +1,6 @@
+# benelib (development version)
+* Fix ggplot2 theme (remove black border around facet labels and rotate y-axis text correctly)
+
 # benelib 1.1.0
 * Include option to specify a custom palette as vector of HEX codes
 * Implement optimized color palettes
