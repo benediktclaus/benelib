@@ -1,4 +1,4 @@
-# benelib (development version)
+# benelib 1.1.0
 * Include option to specify a custom palette as vector of HEX codes
 * Implement optimized color palettes
 * Change argument order of `use_custom_folder()` to provide a folder name directly
