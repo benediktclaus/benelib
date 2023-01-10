@@ -24,9 +24,9 @@ personal_project <- function(path, ...) {
 
 
   # Include additional folders if checked in the menu
-  if (arguments[["literature"]]) use_custom_folder(path, "Literature")
-  if (arguments[["article"]])    use_custom_folder(path, "Article")
-  if (arguments[["misc"]])       use_custom_folder(path, "Miscellaneous")
+  if (arguments[["literature"]]) use_custom_folder(path, folder_name = "Literature")
+  if (arguments[["article"]])    use_custom_folder(path, folder_name = "Article")
+  if (arguments[["misc"]])       use_custom_folder(path, folder_name = "Miscellaneous")
 
 
   # Create Cleaning and Analyses Files if checked
@@ -96,7 +96,7 @@ is_already_here <- function(path, name) {
 #' @importFrom fs dir_create path_wd
 #'
 #' @export
-use_custom_folder <- function(path = fs::path_wd(), folder_name, add = FALSE) {
+use_custom_folder <- function(folder_name, path = fs::path_wd(), add = FALSE) {
   # Check if arguments have correct format
   if (is.na(path)) path <- path_wd()
   if (!is.character(path)) stop("The folder path must be a string.")

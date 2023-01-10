@@ -4,12 +4,12 @@
 \alias{use_custom_folder}
 \title{Create A Custom Folder}
 \usage{
-use_custom_folder(path = fs::path_wd(), folder_name, add = FALSE)
+use_custom_folder(folder_name, path = fs::path_wd(), add = FALSE)
 }
 \arguments{
-\item{path}{Where should the folder be created?}
-
 \item{folder_name}{What should the folder be called? This must be a string.}
+
+\item{path}{Where should the folder be created?}
 
 \item{add}{Should the folder be added even if the name already exists?
 Defaults to \code{FALSE}.}
