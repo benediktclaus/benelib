@@ -1,4 +1,4 @@
-# benelib (development version)
+# benelib 1.1.1
 * Fix ggplot2 theme (remove black border around facet labels and rotate y-axis text correctly)
 
 # benelib 1.1.0
