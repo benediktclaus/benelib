@@ -1,4 +1,4 @@
-# benelib 1.1.2
+# benelib 1.2.0
 * Include new pomological theme function `use_pomo_theme()`
 * New function to create a helper-functions.R file (`use_helper_functions()`)
 * New argument order in plot saving functions
