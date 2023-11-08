@@ -1,3 +1,8 @@
+# benelib 1.1.2
+* Include new pomological theme function `use_pomo_theme()`
+* New function to create a helper-functions.R file (`use_helper_functions()`)
+* New argument order in plot saving functions
+
 # benelib 1.1.1
 * Fix ggplot2 theme (remove black border around facet labels and rotate y-axis text correctly)
 

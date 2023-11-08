@@ -23,7 +23,7 @@
 #'
 #' @return Nothing, saves plot to disk.
 #' @export
-save_custom_plot <- function(plot, filename, path, width = 16, height = 16, units = "cm", dpi = 320) {
+save_custom_plot <- function(filename, plot, path, width = 16, height = 16, units = "cm", dpi = 320) {
   thematic::thematic_save_plot(expr = plot, filename = filename, width = width, height = height, units = units, res = dpi)
 
   fs::file_move(path = filename, new_path = path)

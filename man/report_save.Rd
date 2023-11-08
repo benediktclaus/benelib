@@ -7,8 +7,8 @@
 report_save(
   filename,
   plot,
-  width = 11.75,
   path = "04 Figures",
+  width = 11.75,
   height = 9,
   units = "cm"
 )
@@ -18,9 +18,9 @@ report_save(
 
 \item{plot}{Plot}
 
-\item{width}{Plot width, defaults to 11.75 cm}
-
 \item{path}{Desired path for saving}
+
+\item{width}{Plot width, defaults to 11.75 cm}
 
 \item{height}{Plot height, defaults to 9 cm}
 

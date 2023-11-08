@@ -36,6 +36,17 @@ theming_colors <- list(
     blue = "#0094e6",
     purple = "#ff9900",
     grey = "#787878"
+  ),
+  pomological = c(
+    red = "#c03728",
+    green = "#919c4c",
+    orange = "#fd8f24",
+    yellow = "#f5c04a",
+    rose = "#e68c7c",
+    greyblue = "#828585",
+    lightgreen = "#c3c377",
+    grey = "#4f5157",
+    brown = "#6f5438"
   )
 )
 
@@ -75,6 +86,12 @@ theming_palettes <- list(
     lighter     = colorspace::lighten(theming_colors$dksz[c("red", "green", "purple", "blue", "orange", "grey")], amount = 0.2),
     darker      = colorspace::darken(theming_colors$dksz[c("red", "green", "purple", "blue", "orange", "grey")], amount = 0.1),
     pastel      = colorspace::lighten(theming_colors$dksz[c("red", "green", "purple", "blue", "orange", "grey")], amount = 0.4)
+  ),
+  pomological = list(
+    accent = theming_colors$pomological[["green"]],
+    main = theming_colors$pomological,
+    lighter = colorspace::lighten(theming_colors$pomological, amount = 0.2),
+    darker = colorspace::darken(theming_colors$pomological, amount = 0.1)
   )
 )
 

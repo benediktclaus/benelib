@@ -94,3 +94,29 @@ use_latex_template <- function(folder = NA) {
 
   dir_copy(template_path, destination_path)
 }
+
+
+#' Create a Helper Functions File
+#'
+#' Execute this function to generate a helper-functions.R file in the `03 R`
+#' folder, but the destination can be changed via `folder`.
+#'
+#' @inheritParams use_analysis_template
+#'
+#' @export
+use_helper_functions <- function(folder = NA) {
+  # Check correct folder name format
+  if (!is.na(folder) & !is.character(folder)) stop("The folder name must be a string.")
+
+  # If folder is defined, use it
+  # If not, use default folder "03 R"
+  if (!is.na(folder)) {
+    destination_path <- path(path_wd(), folder)
+  } else {
+    destination_path <- path(path_wd(), "03 R")
+  }
+
+  fs::file_create(
+    fs::path(destination_path, "helper-functions.R")
+  )
+}

@@ -5,8 +5,8 @@
 \title{Save A Plot With Custom Theming}
 \usage{
 save_custom_plot(
-  plot,
   filename,
+  plot,
   path,
   width = 16,
   height = 16,
@@ -15,9 +15,9 @@ save_custom_plot(
 )
 }
 \arguments{
-\item{plot}{A ggplot2 plot.}
-
 \item{filename}{The plot's desired file name.}
+
+\item{plot}{A ggplot2 plot.}
 
 \item{path}{The desired path to which the plot should be saved.}
 

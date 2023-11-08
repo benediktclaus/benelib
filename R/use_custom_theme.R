@@ -82,6 +82,18 @@ use_personal_theme <- function(palette = "main", theme = "personal", accent_colo
 
 #' @rdname use_custom_theme
 #' @export
+use_pomo_theme <- function(palette = "main", theme = "pomological", accent_color, font = "Roboto", reverse = FALSE) {
+  use_custom_theme(
+    palette = palette,
+    theme = theme,
+    accent_color = accent_color,
+    font = font,
+    reverse = reverse
+  )
+}
+
+#' @rdname use_custom_theme
+#' @export
 use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_color, font = "Roboto", reverse = FALSE) {
   use_custom_theme(
     palette = palette,

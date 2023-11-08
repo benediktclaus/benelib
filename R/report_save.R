@@ -15,6 +15,6 @@
 #'
 #' @return Nothing, used for side-effects only
 #' @export
-report_save <- function(filename, plot, width = 11.75, path = "04 Figures", height = 9, units = "cm") {
+report_save <- function(filename, plot, path = "04 Figures", width = 11.75, height = 9, units = "cm") {
   ggplot2::ggsave(filename = filename, plot = plot, path = path, width = width, height = height, units = units)
 }

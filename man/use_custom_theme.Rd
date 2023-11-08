@@ -3,6 +3,7 @@
 \name{use_custom_theme}
 \alias{use_custom_theme}
 \alias{use_personal_theme}
+\alias{use_pomo_theme}
 \alias{use_pedscience_theme}
 \alias{use_palli_theme}
 \alias{use_dksz_theme}
@@ -19,6 +20,14 @@ use_custom_theme(
 use_personal_theme(
   palette = "main",
   theme = "personal",
+  accent_color,
+  font = "Roboto",
+  reverse = FALSE
+)
+
+use_pomo_theme(
+  palette = "main",
+  theme = "pomological",
   accent_color,
   font = "Roboto",
   reverse = FALSE
