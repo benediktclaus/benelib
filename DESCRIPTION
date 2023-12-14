@@ -21,7 +21,8 @@ Imports:
     stringr,
     thematic,
     grDevices,
-    WRS2
+    WRS2,
+    rcartocolor
 Suggests: 
     dplyr,
     rmarkdown,

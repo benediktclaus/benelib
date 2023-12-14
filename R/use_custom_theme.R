@@ -129,6 +129,93 @@ use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font 
 }
 
 
+#' Set a ggplot2 Theme Using CARTO Colors
+#'
+#' https://carto.com/carto-colors/
+#'
+#' @param qualitative_scale String, one of
+#'   - "Vivid" (the default)
+#'   - "Safe"
+#'   - "Prism"
+#'   - "Pastel"
+#'   - "Bold"
+#'   - "Antique"
+#' @param sequential_scale String, for sequential scale one of
+#'   - "Mint" (the default)
+#'   - "TealGrn"
+#'   - "Teal"
+#'   - "SunsetDark"
+#'   - "Sunset"
+#'   - "RedOr"
+#'   - "PurpOr"
+#'   - "Purp"
+#'   - "PinkYl"
+#'   - "Peach"
+#'   - "OrYel"
+#'   - "Magenta"
+#'   - "Emrld"
+#'   - "DarkMint"
+#'   - "BurgYl"
+#'   - "Burg"
+#'   - "BrwnYl"
+#'   - "BluYl"
+#'   - "BluGrn"
+#'   For diverging scales one of
+#'   - "Tropic"
+#'   - "Temps"
+#'   - "TealRose"
+#'   - "Geyser"
+#'   - "Fall"
+#'   - "Earth"
+#'   - "ArmyRose"
+#' @param qualitative_accent Logiocal, should the accent color come from the
+#'   qualitative scale?
+#' @param font String, a font family from Google Fonts
+#' @param reverse Logical, should color scale be reversed?
+#'
+#' @return Nothing, called for side effects only
+#' @export
+#'
+#' @examples
+#' library(ggplot2)
+#'
+#' use_carto_theme()
+#' palmer_penguins |>
+#'   ggplot(aes(bill_length_mm, flipper_length_mm, color = species)) +
+#'   geom_point()
+#'
+#'
+#' palmer_penguins |>
+#'   ggplot(aes(bill_length_mm, flipper_length_mm, color = body_mass_g)) +
+#'   geom_point()
+use_carto_theme <- function(qualitative_scale = "Vivid", sequential_scale = "Mint", qualitative_accent = TRUE, font = "Roboto", reverse = FALSE) {
+  initialize_device()
+  ggplot2::theme_set(theme_bene())
+
+  qual_palette <- rcartocolor::carto_pal(n = 12, qualitative_scale)
+  seq_palette <- rcartocolor::carto_pal(n = 30, sequential_scale)
+
+  if (qualitative_accent) accent_color <- dplyr::first(qual_palette) else accent_color <- dplyr::last(seq_palette)
+
+  if (reverse) {
+    qual_palette <- rev(qual_palette)
+    seq_palette <- rev(seq_palette)
+
+    if (!qualitative_accent) accent_color <- dplyr::first(seq_palette)
+  }
+
+
+  thematic::thematic_on(
+    bg = "white",
+    fg = "grey15",
+    accent = accent_color,
+    sequential = seq_palette,
+    qualitative = qual_palette,
+    font = thematic::font_spec(font)
+  )
+}
+
+
 #' Initialize Graphics Device
 #'
 #' When use a custom themin function with thematic, the package showtext will
@@ -154,3 +241,5 @@ use_base_theme <- function() {
   ggplot2::theme_set(ggplot2::theme_gray())
   thematic_off()
 }
+
+
