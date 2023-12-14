@@ -1,3 +1,6 @@
+# benelib 1.3.0
+* Include new CARTO themes function `use_carto_theme()`
+
 # benelib 1.2.0
 * Include new pomological theme function `use_pomo_theme()`
 * New function to create a helper-functions.R file (`use_helper_functions()`)
