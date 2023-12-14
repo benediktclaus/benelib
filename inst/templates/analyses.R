@@ -1,12 +1,12 @@
 library(tidyverse)
+library(tidybayes)
 library(easystats)
 library(snakecase)
 library(benelib)
-library(gt)
 library(brms)
-library(tidybayes)
+library(gt)
 
-use_pomo_theme()
+use_carto_theme()
 
 
 
