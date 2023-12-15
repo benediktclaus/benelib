@@ -1,3 +1,6 @@
+# benelib 2.0.0
+* Package house-cleaning
+
 # benelib 1.3.0
 * Include new CARTO themes function `use_carto_theme()`
 

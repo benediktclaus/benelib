@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 # benelib <img src="man/figures/logo.png" width = "160" align="right"/>
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/benediktclaus/benelib/workflows/R-CMD-check/badge.svg)](https://github.com/benediktclaus/benelib/actions)
 [![R-CMD-check](https://github.com/benediktclaus/benelib/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/benediktclaus/benelib/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -36,7 +35,7 @@ library(benelib)
 
 ## Examples
 ### ggplot2 Colors and Fills
-One of the main reasons for this package to exist is the abilty to change `ggplot2`'s default color and fill scales to a given corporate design.
+One of the main reasons for this package to exist is the ability to change `ggplot2`'s default color and fill scales to a given corporate design.
 
 ```{r include=FALSE}
 library(benelib)
@@ -51,14 +50,3 @@ palmer_penguins %>%
   ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point()
 ```
-
-### Plot themes
-Another nice addition is my personal `ggplot2` theme.
-
-```{r example-theme}
-palmer_penguins %>% 
-  ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
-  geom_point() +
-  theme_bene()
-```
-

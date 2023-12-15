@@ -25,6 +25,7 @@ reference:
     - matches("use_.*_template")
     - report_save
     - open_working_directory
+    - use_helper_functions
 
   - title: Color and Fill Scales
     desc: >

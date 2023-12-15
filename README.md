@@ -5,7 +5,6 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/benediktclaus/benelib/workflows/R-CMD-check/badge.svg)](https://github.com/benediktclaus/benelib/actions)
 [![R-CMD-check](https://github.com/benediktclaus/benelib/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/benediktclaus/benelib/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -30,7 +29,7 @@ library(benelib)
 
 ### ggplot2 Colors and Fills
 
-One of the main reasons for this package to exist is the abilty to
+One of the main reasons for this package to exist is the ability to
 change `ggplot2`’s default color and fill scales to a given corporate
 design.
 
@@ -41,23 +40,6 @@ use_personal_theme()
 palmer_penguins %>% 
   ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point()
-#> Warning in check_font_path(italic, "italic"): 'italic' should be a length-one
-#> vector, using the first element
 ```
 
 <img src="man/figures/README-example-color-scale-1.png" width="100%" />
-
-### Plot themes
-
-Another nice addition is my personal `ggplot2` theme.
-
-``` r
-palmer_penguins %>% 
-  ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
-  geom_point() +
-  theme_bene()
-#> Warning in check_font_path(italic, "italic"): 'italic' should be a length-one
-#> vector, using the first element
-```
-
-<img src="man/figures/README-example-theme-1.png" width="100%" />
