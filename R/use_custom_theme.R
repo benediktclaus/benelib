@@ -14,7 +14,7 @@
 #'   - `"dksz"`
 #' @param accent_color The accent color. Can be a string for a HEX value. The
 #'   default is the palettes accent color in `theming_palettes`
-#' @param font String, a Google Font. Default is `"Roboto"`
+#' @param font String, a Google Font. Default is `"Rubik"`
 #' @param reverse Logical. Should the palette be reversed?
 #'
 #' @return Nothing, called for side effects
@@ -44,7 +44,7 @@
 #' # Reset the theme with
 #' use_base_theme()
 #' example_plot
-use_custom_theme <- function(palette = "main", theme = "personal", accent_color, font = "Roboto", reverse = FALSE) {
+use_custom_theme <- function(palette = "main", theme = "personal", accent_color, font = "Rubik", reverse = FALSE) {
   theming_palettes <- theming_palettes
   initialize_device()
   ggplot2::theme_set(theme_bene())
@@ -60,7 +60,7 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
 
   thematic::thematic_on(
     bg = "white",
-    fg = "grey10",
+    fg = "grey20",
     accent = accent_color,
     sequential = thematic::sequential_gradient(fg_weight = 0, bg_weight = 0.9, fg_low = FALSE),
     qualitative = chosen_palette,
@@ -70,7 +70,7 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
 
 #' @rdname use_custom_theme
 #' @export
-use_personal_theme <- function(palette = "main", theme = "personal", accent_color, font = "Roboto", reverse = FALSE) {
+use_personal_theme <- function(palette = "main", theme = "personal", accent_color, font = "Rubik", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -82,7 +82,7 @@ use_personal_theme <- function(palette = "main", theme = "personal", accent_colo
 
 #' @rdname use_custom_theme
 #' @export
-use_pomo_theme <- function(palette = "main", theme = "pomological", accent_color, font = "Roboto", reverse = FALSE) {
+use_pomo_theme <- function(palette = "main", theme = "pomological", accent_color, font = "Rubik", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -94,7 +94,7 @@ use_pomo_theme <- function(palette = "main", theme = "pomological", accent_color
 
 #' @rdname use_custom_theme
 #' @export
-use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_color, font = "Roboto", reverse = FALSE) {
+use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_color, font = "Rubik", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -106,7 +106,7 @@ use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_
 
 #' @rdname use_custom_theme
 #' @export
-use_palli_theme <- function(palette = "main", theme = "palli", accent_color, font = "Roboto", reverse = FALSE) {
+use_palli_theme <- function(palette = "main", theme = "palli", accent_color, font = "Rubik", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -118,7 +118,7 @@ use_palli_theme <- function(palette = "main", theme = "palli", accent_color, fon
 
 #' @rdname use_custom_theme
 #' @export
-use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font = "Roboto", reverse = FALSE) {
+use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font = "Rubik", reverse = FALSE) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -188,7 +188,7 @@ use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font 
 #' palmer_penguins |>
 #'   ggplot(aes(bill_length_mm, flipper_length_mm, color = body_mass_g)) +
 #'   geom_point()
-use_carto_theme <- function(qualitative_scale = "Vivid", sequential_scale = "Mint", qualitative_accent = TRUE, font = "Roboto", reverse = FALSE) {
+use_carto_theme <- function(qualitative_scale = "Vivid", sequential_scale = "Mint", qualitative_accent = TRUE, font = "Rubik", reverse = FALSE) {
   initialize_device()
   ggplot2::theme_set(theme_bene())
 
