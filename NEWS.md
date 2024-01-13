@@ -1,3 +1,6 @@
+# benelib 2.1.0
+* Changing ggplot2-theming default font to "Rubik"
+
 # benelib 2.0.0
 * Package house-cleaning
 
