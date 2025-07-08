@@ -1,3 +1,5 @@
+# benelib 2.2.0
+
 # benelib 2.1.0
 * Changing ggplot2-theming default font to "Rubik"
 
