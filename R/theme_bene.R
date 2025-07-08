@@ -13,7 +13,7 @@
 #' library(ggplot2)
 #'
 #' \dontrun{
-#' palmer_penguins %>%
+#' palmer_penguins  |>
 #' ggplot(aes(bill_length_mm, bill_depth_mm, color = species)) +
 #'   geom_point() +
 #'   theme_bene()
@@ -25,7 +25,16 @@ theme_bene <- function(base_size = 11) {
     theme(
       legend.position = "bottom",
       strip.background = element_rect(fill = "white", color = "white"),
-      strip.text.x = element_text(color = "grey20", hjust = 0, margin = margin(b = 3, l = 0)),
-      strip.text.y = element_text(color = "grey20", hjust = 0, angle = 270, margin = margin(l = 3))
+      strip.text.x = element_text(
+        color = "grey20",
+        hjust = 0,
+        margin = margin(b = 3, l = 0)
+      ),
+      strip.text.y = element_text(
+        color = "grey20",
+        hjust = 0,
+        angle = 270,
+        margin = margin(l = 3)
+      )
     )
 }

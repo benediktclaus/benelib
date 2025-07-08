@@ -24,7 +24,7 @@
 #' library(ggplot2)
 #' use_custom_theme(palette = "full")
 #'
-#' example_plot <- mpg %>%
+#' example_plot <- mpg  |>
 #'   ggplot(aes(displ, hwy, color = as.factor(cyl))) +
 #'   geom_point()
 #' example_plot
@@ -44,7 +44,13 @@
 #' # Reset the theme with
 #' use_base_theme()
 #' example_plot
-use_custom_theme <- function(palette = "main", theme = "personal", accent_color, font = "Rubik", reverse = FALSE) {
+use_custom_theme <- function(
+  palette = "main",
+  theme = "personal",
+  accent_color,
+  font = "Rubik",
+  reverse = FALSE
+) {
   theming_palettes <- theming_palettes
   initialize_device()
   ggplot2::theme_set(theme_bene())
@@ -55,14 +61,24 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
     chosen_palette <- purrr::pluck(theming_palettes, theme, palette)
   }
 
-  if (missing(accent_color)) accent_color <- purrr::pluck(theming_palettes, theme, "accent") else accent_color <- accent_color
-  if (reverse) chosen_palette <- rev(chosen_palette)
+  if (missing(accent_color)) {
+    accent_color <- purrr::pluck(theming_palettes, theme, "accent")
+  } else {
+    accent_color <- accent_color
+  }
+  if (reverse) {
+    chosen_palette <- rev(chosen_palette)
+  }
 
   thematic::thematic_on(
     bg = "white",
     fg = "grey20",
     accent = accent_color,
-    sequential = thematic::sequential_gradient(fg_weight = 0, bg_weight = 0.9, fg_low = FALSE),
+    sequential = thematic::sequential_gradient(
+      fg_weight = 0,
+      bg_weight = 0.9,
+      fg_low = FALSE
+    ),
     qualitative = chosen_palette,
     font = thematic::font_spec(font)
   )
@@ -70,7 +86,13 @@ use_custom_theme <- function(palette = "main", theme = "personal", accent_color,
 
 #' @rdname use_custom_theme
 #' @export
-use_personal_theme <- function(palette = "main", theme = "personal", accent_color, font = "Rubik", reverse = FALSE) {
+use_personal_theme <- function(
+  palette = "main",
+  theme = "personal",
+  accent_color,
+  font = "Rubik",
+  reverse = FALSE
+) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -82,7 +104,13 @@ use_personal_theme <- function(palette = "main", theme = "personal", accent_colo
 
 #' @rdname use_custom_theme
 #' @export
-use_pomo_theme <- function(palette = "main", theme = "pomological", accent_color, font = "Rubik", reverse = FALSE) {
+use_pomo_theme <- function(
+  palette = "main",
+  theme = "pomological",
+  accent_color,
+  font = "Rubik",
+  reverse = FALSE
+) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -94,7 +122,13 @@ use_pomo_theme <- function(palette = "main", theme = "pomological", accent_color
 
 #' @rdname use_custom_theme
 #' @export
-use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_color, font = "Rubik", reverse = FALSE) {
+use_pedscience_theme <- function(
+  palette = "main",
+  theme = "pedscience",
+  accent_color,
+  font = "Rubik",
+  reverse = FALSE
+) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -106,7 +140,13 @@ use_pedscience_theme <- function(palette = "main", theme = "pedscience", accent_
 
 #' @rdname use_custom_theme
 #' @export
-use_palli_theme <- function(palette = "main", theme = "palli", accent_color, font = "Rubik", reverse = FALSE) {
+use_palli_theme <- function(
+  palette = "main",
+  theme = "palli",
+  accent_color,
+  font = "Rubik",
+  reverse = FALSE
+) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -118,7 +158,13 @@ use_palli_theme <- function(palette = "main", theme = "palli", accent_color, fon
 
 #' @rdname use_custom_theme
 #' @export
-use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font = "Rubik", reverse = FALSE) {
+use_dksz_theme <- function(
+  palette = "main",
+  theme = "dksz",
+  accent_color,
+  font = "Rubik",
+  reverse = FALSE
+) {
   use_custom_theme(
     palette = palette,
     theme = theme,
@@ -188,14 +234,24 @@ use_dksz_theme <- function(palette = "main", theme = "dksz", accent_color, font 
 #' palmer_penguins |>
 #'   ggplot(aes(bill_length_mm, flipper_length_mm, color = body_mass_g)) +
 #'   geom_point()
-use_carto_theme <- function(qualitative_scale = "Vivid", sequential_scale = "Mint", qualitative_accent = TRUE, font = "Rubik", reverse = FALSE) {
+use_carto_theme <- function(
+  qualitative_scale = "Vivid",
+  sequential_scale = "Mint",
+  qualitative_accent = TRUE,
+  font = "Rubik",
+  reverse = FALSE
+) {
   initialize_device()
   ggplot2::theme_set(theme_bene())
 
   qual_palette <- rcartocolor::carto_pal(n = 12, qualitative_scale)
   seq_palette <- rcartocolor::carto_pal(n = 30, sequential_scale)
 
-  if (qualitative_accent) accent_color <- dplyr::first(qual_palette) else accent_color <- dplyr::last(seq_palette)
+  if (qualitative_accent) {
+    accent_color <- dplyr::first(qual_palette)
+  } else {
+    accent_color <- dplyr::last(seq_palette)
+  }
 
   if (reverse) {
     qual_palette <- rev(qual_palette)
@@ -203,7 +259,6 @@ use_carto_theme <- function(qualitative_scale = "Vivid", sequential_scale = "Min
 
     if (!qualitative_accent) accent_color <- dplyr::first(seq_palette)
   }
-
 
   thematic::thematic_on(
     bg = "white",
@@ -241,5 +296,3 @@ use_base_theme <- function() {
   ggplot2::theme_set(ggplot2::theme_gray())
   thematic_off()
 }
-
-

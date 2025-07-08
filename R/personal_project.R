@@ -16,24 +16,33 @@ personal_project <- function(path, ...) {
   # Create project folder
   dir_create(path = path)
 
-
   # Create subfolders
   folder_list <- list("Raw Data", "Data", "R", "Figures", "Reports")
-  folder_list %>%
+  folder_list |>
     walk(~ use_custom_folder(path, folder_name = .))
 
-
   # Include additional folders if checked in the menu
-  if (arguments[["literature"]]) use_custom_folder(path, folder_name = "Literature")
-  if (arguments[["article"]])    use_custom_folder(path, folder_name = "Article")
-  if (arguments[["misc"]])       use_custom_folder(path, folder_name = "Miscellaneous")
-
+  if (arguments[["literature"]]) {
+    use_custom_folder(path, folder_name = "Literature")
+  }
+  if (arguments[["article"]]) {
+    use_custom_folder(path, folder_name = "Article")
+  }
+  if (arguments[["misc"]]) {
+    use_custom_folder(path, folder_name = "Miscellaneous")
+  }
 
   # Create Cleaning and Analyses Files if checked
-  if (arguments[["cleaning-csv"]])   use_data_cleaning_template(path(path, "03 R"), file_format = "csv")
-  if (arguments[["cleaning-spss"]])  use_data_cleaning_template(path(path, "03 R"), file_format = "spss")
-  if (arguments[["cleaning-excel"]]) use_data_cleaning_template(path(path, "03 R"), file_format = "excel")
-  if (arguments[["analyses"]])       use_analysis_template(path(path, "03 R"))
+  if (arguments[["cleaning-csv"]]) {
+    use_data_cleaning_template(path(path, "03 R"), file_format = "csv")
+  }
+  if (arguments[["cleaning-spss"]]) {
+    use_data_cleaning_template(path(path, "03 R"), file_format = "spss")
+  }
+  if (arguments[["cleaning-excel"]]) {
+    use_data_cleaning_template(path(path, "03 R"), file_format = "excel")
+  }
+  if (arguments[["analyses"]]) use_analysis_template(path(path, "03 R"))
 }
 
 
@@ -58,7 +67,6 @@ create_folder_name <- function(path, name) {
 }
 
 
-
 #' Check Existing Folders
 #'
 #' Check if folder name already exists in current working directory. Returns
@@ -71,11 +79,13 @@ create_folder_name <- function(path, name) {
 #'
 #' @noRd
 is_already_here <- function(path, name) {
-  detected_strings <-  str_detect(dir_ls(path, type = "directory"), str_c("^.*\\d{1,2} ", name, "$"))
+  detected_strings <- str_detect(
+    dir_ls(path, type = "directory"),
+    str_c("^.*\\d{1,2} ", name, "$")
+  )
 
   TRUE %in% detected_strings
 }
-
 
 
 #' Create A Custom Folder
@@ -98,13 +108,25 @@ is_already_here <- function(path, name) {
 #' @export
 use_custom_folder <- function(folder_name, path = fs::path_wd(), add = FALSE) {
   # Check if arguments have correct format
-  if (is.na(path)) path <- path_wd()
-  if (!is.character(path)) stop("The folder path must be a string.")
-  if (!is.character(folder_name)) stop("The folder name must be a string.")
+  if (is.na(path)) {
+    path <- path_wd()
+  }
+  if (!is.character(path)) {
+    stop("The folder path must be a string.")
+  }
+  if (!is.character(folder_name)) {
+    stop("The folder name must be a string.")
+  }
 
   # Check if folder already exists
   if (!add) {
-    if (is_already_here(path, folder_name)) stop("The project already contains the \"", folder_name, "\" folder. Are you sure you want to add another one? If so, use \"add = TRUE\"")
+    if (is_already_here(path, folder_name)) {
+      stop(
+        "The project already contains the \"",
+        folder_name,
+        "\" folder. Are you sure you want to add another one? If so, use \"add = TRUE\""
+      )
+    }
   }
 
   new_folder_name <- create_folder_name(path, folder_name)

@@ -13,7 +13,7 @@ use_custom_theme(
   palette = "main",
   theme = "personal",
   accent_color,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 
@@ -21,7 +21,7 @@ use_personal_theme(
   palette = "main",
   theme = "personal",
   accent_color,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 
@@ -29,7 +29,7 @@ use_pomo_theme(
   palette = "main",
   theme = "pomological",
   accent_color,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 
@@ -37,7 +37,7 @@ use_pedscience_theme(
   palette = "main",
   theme = "pedscience",
   accent_color,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 
@@ -45,7 +45,7 @@ use_palli_theme(
   palette = "main",
   theme = "palli",
   accent_color,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 
@@ -53,7 +53,7 @@ use_dksz_theme(
   palette = "main",
   theme = "dksz",
   accent_color,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 }
@@ -79,7 +79,7 @@ use_dksz_theme(
 \item{accent_color}{The accent color. Can be a string for a HEX value. The
 default is the palettes accent color in \code{theming_palettes}}
 
-\item{font}{String, a Google Font. Default is \code{"Roboto"}}
+\item{font}{String, a Google Font. Default is \code{"Rubik"}}
 
 \item{reverse}{Logical. Should the palette be reversed?}
 }
@@ -93,7 +93,7 @@ Set a Custom ggplot2 Theme
 library(ggplot2)
 use_custom_theme(palette = "full")
 
-example_plot <- mpg \%>\%
+example_plot <- mpg  |>
   ggplot(aes(displ, hwy, color = as.factor(cyl))) +
   geom_point()
 example_plot

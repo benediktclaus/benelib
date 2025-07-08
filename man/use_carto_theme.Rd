@@ -8,7 +8,7 @@ use_carto_theme(
   qualitative_scale = "Vivid",
   sequential_scale = "Mint",
   qualitative_accent = TRUE,
-  font = "Roboto",
+  font = "Rubik",
   reverse = FALSE
 )
 }
