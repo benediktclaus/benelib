@@ -23,7 +23,6 @@ reference:
   - contents:
     - use_custom_folder
     - matches("use_.*_template")
-    - report_save
     - open_working_directory
     - use_helper_functions
 
@@ -35,14 +34,6 @@ reference:
     - matches("use_.*_theme")
     - save_custom_plot
 
-  - title: ggplot2 Summary functions
-    desc: These functions are particularly useful when creating statistical summaries with stat_summary() over individual data points
-  - contents:
-    - mean_sd
-    - median_se
-    - mest_se
-    - tr_mean_se
-    - win_mean_se
 
   - title: ggplot2 Themes
     desc: >
@@ -50,13 +41,7 @@ reference:
   - contents:
     - theme_bene
 
-  - title: gt Themes
-    desc: >
-      Themes for the gt package and gtsummary
-  - contents:
-    - starts_with("theme_gt")
 
   - title: Other
   - contents:
     - palmer_penguins
-    - to_tibble
